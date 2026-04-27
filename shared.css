@@ -1,0 +1,302 @@
+/* ── Reset ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── CSS Custom Properties ── */
+:root {
+  --panel-bg: #faf9f5;
+  --panel-text: #2d2d2d;
+  --panel-muted: #8a847c;
+  --panel-subtle: #6a6560;
+  --panel-border: #ddd8d0;
+  --panel-accent: #6b93a8;
+  --body-bg-right: #faf9f5;
+  --drawer-bg: #292F36;
+}
+
+
+/* ── Logo ── */
+a.logo {
+  position: fixed;
+  top: 2.5rem;
+  left: 3.5rem;
+  z-index: 150;
+  display: inline-block;
+  line-height: 1;
+  text-decoration: none;
+  font-family: "Dancing Script", cursive;
+  font-size: 2.6rem;
+  font-weight: 500;
+  color: #6b93a8;
+  letter-spacing: 0.01em;
+}
+
+/* ── Cell icon nav badge (fixed, always visible) ── */
+.cell-nav-wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 82px;
+  height: 82px;
+  z-index: 300;
+  cursor: pointer;
+  background: rgba(41, 47, 54, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  transition: background 0.2s;
+}
+
+.cell-nav-wrap:hover {
+  background: rgba(41, 47, 54, 1);
+}
+
+.cell-nav-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Overlay ── */
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 349;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s;
+}
+
+.drawer-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ── Drawer ── */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background: #292F36;
+  z-index: 350;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 2.5rem;
+}
+
+.drawer.open {
+  transform: translateX(0);
+}
+
+.drawer-subtitle {
+  font-family: "Montserrat", "Noto Sans KR", sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 2.5rem;
+  overflow: hidden;
+  height: 1.5em;
+  position: relative;
+}
+
+.drawer-subtitle span {
+  display: block;
+  position: absolute;
+  width: 100%;
+}
+
+.drawer nav ul {
+  list-style: none;
+}
+
+.drawer nav ul li {
+  margin: 0;
+}
+
+.drawer nav ul li a {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  display: block;
+  padding: 0.45rem 0;
+  transition: color 0.2s;
+}
+
+.drawer nav ul li a:hover {
+  color: #fff;
+}
+
+/* ── Research submenu ── */
+.drawer-research-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.drawer-research-link {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  transition: color 0.2s;
+  padding: 0.45rem 0;
+  flex: 1;
+}
+
+.drawer-research-link:hover {
+  color: #fff;
+}
+
+.drawer-research-toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0.45rem 0.2rem;
+  transition: color 0.2s;
+}
+
+.drawer-research-toggle:hover {
+  color: #fff;
+}
+
+.drawer-research-arrow {
+  display: inline-block;
+  font-size: 1rem;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: rgba(255,255,255,0.4);
+  margin-left: 0.2em;
+}
+
+.drawer-research-toggle.open .drawer-research-arrow {
+  transform: rotate(90deg);
+}
+
+.drawer-subnav {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s;
+  opacity: 0;
+}
+
+.drawer-subnav.open {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.drawer .drawer-subnav a {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+  padding: 0.35rem 0 0.35rem 1.1rem;
+  transition: color 0.2s;
+  border-left: 1px solid rgba(255,255,255,0.15);
+  margin-left: 0.2rem;
+}
+
+.drawer .drawer-subnav a:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.close-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 1.3rem;
+  text-decoration: none;
+  line-height: 1;
+  transition: color 0.2s;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.close-btn:hover {
+  color: #fff;
+}
+
+
+/* ── Shared panel utility classes ── */
+.pubs-section-label {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #8a847c;
+  margin-bottom: 2rem;
+}
+
+
+/* ── Mobile responsive ── */
+@media (max-width: 768px) {
+  a.logo {
+    font-size: 1.9rem;
+    left: 1.25rem;
+    top: 1.25rem;
+  }
+
+  .cell-nav-wrap {
+    width: 60px;
+    height: 60px;
+    padding: 8px;
+  }
+
+  .drawer {
+    width: 100%;
+    padding: 2.5rem 2rem;
+  }
+
+  .drawer nav ul li a,
+  .drawer-research-toggle {
+    font-size: 1.75rem;
+  }
+}
+
+/* ── Site footer ── */
+.site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 260;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem 0;
+  background: rgba(41, 47, 54, 0.88);
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+}
+
+/* ── Shared JS snippet for drawer + cell pulse ── */
+

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interpretations – Chris You</title>
+  <meta name="description" content="Research interpretations by Chris You — molecular mechanisms of transcriptional bursting, proteome remodeling, and lysosomal vulnerability with cell size." />
+  <meta property="og:title" content="Interpretations – Chris You" />
+  <meta property="og:description" content="Molecular mechanisms of transcriptional bursting, proteome remodeling, and lysosomal vulnerability with cell size." />
+  <meta property="og:image" content="resources/shared/portrait_about_2.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="resources/shared/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@300;400&family=Dancing+Script:wght@500&family=Noto+Sans+KR:wght@300;400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="shared.css" />
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 300;
+      color: #2d2d2d;
+      background: #faf9f5;
+    }
+
+    .sub-panel-inner {
+      padding: 7.25rem 3rem 5rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .findings-layout {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .findings-figs {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .finding-fig {
+      background: #e8e3dc;
+      border-radius: 8px;
+      padding: 1.75rem 1.5rem;
+      margin: 0;
+    }
+
+    .finding-fig object {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .sub-panel-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4em;
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--panel-muted, #8a847c);
+      text-decoration: none;
+      transition: color 0.2s;
+      margin-bottom: 2.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .sub-panel-back:hover {
+      color: var(--panel-text, #2d2d2d);
+    }
+
+    .finding-entry {
+      margin-bottom: 2.5rem;
+      padding-left: 1.25rem;
+      border-left: 2px solid var(--panel-border, #ddd8d0);
+    }
+
+    .finding-number {
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--panel-accent, #6b93a8);
+      margin-bottom: 0.35rem;
+    }
+
+    .finding-title {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 400;
+      color: var(--panel-text, #2d2d2d);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+
+    .finding-body {
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: var(--panel-subtle, #6a6560);
+      line-height: 1.75;
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 768px) {
+      .sub-panel-inner { padding: 5.5rem 1.25rem 3rem; }
+      .findings-layout { grid-template-columns: 1fr; }
+      .findings-figs { order: -1; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a href="index.html" class="logo">chris you</a>
+
+  <!-- Cell icon nav badge -->
+  <div class="cell-nav-wrap" id="menuBtn" role="button" aria-label="Open navigation menu" tabindex="0">
+      <svg class="cell-nav-svg" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 276.8 257.7">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #231f20;
+        stroke-miterlimit: 10;
+        stroke-width: 8px;
+      }
+
+      .cls-3 {
+        fill: #231f20;
+      }
+
+      .cls-4, .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-4" d="M21.12,239.37c-19-18.36-25.62-61.92-1.85-82.42,21.24-18.69,53.99,1.77,71.87,20.93,21.42,16.64,43.69,45.97,24.1,63.49-22.13,19.33-71.59,13.84-94.13-2Z"/>
+    <path class="cls-1" d="M21.12,239.37c-19-18.36-25.62-61.92-1.85-82.42,21.24-18.69,53.99,1.77,71.87,20.93,21.42,16.64,43.69,45.97,24.1,63.49-22.13,19.33-71.59,13.84-94.13-2Z"/>
+  </g>
+  <g>
+    <g>
+      <path class="cls-4" d="M106.63,40.51c3.02,17.4-6.1,32.4-12.3,44.84-6.15,11.59-12.09,26.14-24.43,25.37-12.31-1.22-23.86-14.13-34.12-22.77-10.3-7.78-23.79-15.14-27.26-24.74-3.5-9.14,5.26-17.98,11.24-26.73,6.03-9.61,11.9-22.88,24.67-29.46C57.22,0,69.14,6.75,79.61,11.69c10.42,5.8,23.98,11.88,27.02,28.82Z"/>
+      <path class="cls-1" d="M106.63,40.51c3.02,17.4-6.1,32.4-12.3,44.84-6.15,11.59-12.09,26.14-24.43,25.37-12.31-1.22-23.86-14.13-34.12-22.77-10.3-7.78-23.79-15.14-27.26-24.74-3.5-9.14,5.26-17.98,11.24-26.73,6.03-9.61,11.9-22.88,24.67-29.46C57.22,0,69.14,6.75,79.61,11.69c10.42,5.8,23.98,11.88,27.02,28.82Z"/>
+    </g>
+    <circle class="cls-2" cx="66.51" cy="50.61" r="11.49"/>
+    <circle class="cls-3" cx="45.66" cy="34.7" r="5.48"/>
+    <circle class="cls-3" cx="37.62" cy="59.49" r="5.48"/>
+  </g>
+  <g>
+    <path class="cls-4" d="M270.83,190.51c-6.89,15.4-28.95,7.23-40.28,12.65-11.66,4.91-20.09,24.8-33.71,19.75-13.2-4.91-23.04-27.42-35.66-37.46-12.66-9.29-34.27-12.61-41.52-22.69-7.52-9.71,4.43-21.71,3.71-32.2-.7-10.17-14.93-22.08-8.32-32.16,6.65-10.82,29.31-14.05,40.81-22.74,11.91-9.66,20.49-32.37,34.64-37.5,13.72-4.98,23.71,14.52,36.6,19.57,12.85,5.79,35.03-1.93,42.05,12.42,7.21,15.49-5.47,41.58-5.18,60.2.29,18.05,13.78,44.02,6.85,60.16Z"/>
+    <path class="cls-1" d="M270.83,190.51c-6.89,15.4-28.95,7.23-40.28,12.65-11.66,4.91-20.09,24.8-33.71,19.75-13.2-4.91-23.04-27.42-35.66-37.46-12.66-9.29-34.27-12.61-41.52-22.69-7.52-9.71,4.43-21.71,3.71-32.2-.7-10.17-14.93-22.08-8.32-32.16,6.65-10.82,29.31-14.05,40.81-22.74,11.91-9.66,20.49-32.37,34.64-37.5,13.72-4.98,23.71,14.52,36.6,19.57,12.85,5.79,35.03-1.93,42.05,12.42,7.21,15.49-5.47,41.58-5.18,60.2.29,18.05,13.78,44.02,6.85,60.16Z"/>
+  </g>
+  <circle class="cls-2" cx="222.42" cy="141.79" r="23.07"/>
+  <circle class="cls-3" cx="174.28" cy="151.44" r="4.81"/>
+  <circle class="cls-3" cx="189.08" cy="96.85" r="4.81"/>
+  <circle class="cls-3" cx="181.57" cy="132.46" r="4.81"/>
+  <circle class="cls-3" cx="231.39" cy="104.05" r="4.81"/>
+  <circle class="cls-2" cx="51.14" cy="218.21" r="14.6"/>
+  <circle class="cls-3" cx="45.66" cy="179.31" r="4.81"/>
+  <circle class="cls-3" cx="80.98" cy="203.61" r="4.81"/>
+</svg>
+    </div>
+
+  <div class="sub-panel-inner">
+    <a class="sub-panel-back" href="research.html">&#x2190;&nbsp;&nbsp;research</a>
+    <span class="pubs-section-label">molecular determinants of transcriptional bursting</span>
+
+    <div class="findings-layout">
+      <!-- Left: all interpretations flowing freely -->
+      <div>
+        <div class="finding-entry">
+          <div class="finding-title">Transcription is the primary driver of proteome remodeling</div>
+          <p class="finding-body">By systematically measuring each major step of the gene expression pathway —
+            transcription, translation, mRNA turnover, and protein turnover — across a two-fold size range, we established
+            that differential transcription is the dominant mechanism. Combined models explain 75% of size-dependent
+            protein variation (R² = 0.75), with transcription accounting for nearly all of that explanatory power.</p>
+        </div>
+        <div class="finding-entry">
+          <div class="finding-title">Larger cells prolong transcriptional bursts to scale mRNA output</div>
+          <p class="finding-body">Endogenous live-cell MS2 imaging of the scaling genes RAB7A and RHOA showed that burst
+            size increases with cell size. Decomposing burst size revealed that this is primarily driven by longer ON
+            times — once a promoter is activated in a large cell, it remains active for a longer duration. Burst amplitude
+            (the rate of RNA Pol II loading) and burst initiation rate were comparatively minor contributors. Inactive
+            (OFF) periods were modestly shortened.</p>
+        </div>
+        <div class="finding-entry">
+          <div class="finding-title">Transcription factor dilution as a potential mechanism</div>
+          <p class="finding-body">As cells enlarge, the genome is diluted relative to cell volume, reducing the
+            DNA-to-cytoplasm ratio. We speculate that transcription factor concentrations remain higher relative to a
+            fixed number of genomic binding sites, leading to greater promoter occupancy — analogous to the effect of MYC
+            overexpression, which drives global transcriptional upregulation through increased burst size and ON time via
+            changes in TBP, SPT5, and MED1 dwell times.</p>
+        </div>
+        <div class="finding-entry">
+          <div class="finding-title">Differential scaling is gene-encoded or signal-driven, not expression-level-dependent</div>
+          <p class="finding-body">Unlike findings in budding yeast, we observed no correlation between basal mRNA
+            expression level and size-slope direction in mammalian cells — ruling out the "transcriptomic inversion"
+            model. Instead, differential scaling may be hardwired in the regulatory architecture of individual promoters,
+            or driven by an upstream signaling cascade (resembling mTOR inhibition) that is triggered by genome dilution
+            and reshapes the transcriptional landscape as a cell grows.</p>
+        </div>
+        <div class="finding-entry">
+          <div class="finding-title">Lysosomal super-scaling creates a size-specific therapeutic vulnerability</div>
+          <p class="finding-body">The disproportionate accumulation of lysosomal proteins in large cells reflects a
+            broader pattern of biosynthetic imbalance. In contexts of extreme cell enlargement — such as following CDK4/6
+            inhibition — these lysosomal vulnerabilities may be clinically exploitable. Size-specific vulnerabilities have
+            also been reported through IRF4 upregulation sensitizing myeloma cells to bortezomib, and GPX4-dependent
+            ferroptosis susceptibility in iron-rich, large cells.</p>
+        </div>
+      </div>
+      <!-- Right: diagrams independently stacked -->
+      <div class="findings-figs">
+        <figure class="finding-fig">
+          <object type="image/svg+xml" data="resources/interpretations/transcriptome_remodelling.xml"></object>
+        </figure>
+        <figure class="finding-fig">
+          <object type="image/svg+xml" data="resources/interpretations/burst_size_scaling.xml"></object>
+        </figure>
+        <figure class="finding-fig" style="width: 80%; align-self: center;">
+          <object type="image/svg+xml" data="resources/interpretations/on_time_scaling.xml"></object>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <span>&copy; 2026 Dong Shin (Chris) You. All rights reserved.</span>
+  </footer>
+
+  <!-- Drawer overlay -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <!-- Navigation drawer -->
+  <div class="drawer" id="drawer">
+    <button class="close-btn" id="closeBtn" aria-label="Close menu">&#x2715;</button>
+    <div class="drawer-subtitle"><span id="drawerName">Chris You</span></div>
+    <nav>
+      <ul>
+        <li><a href="index.html#about">about</a></li>
+        <li><a href="cv.html">cv</a></li>
+        <li>
+        <div class="drawer-research-row">
+          <a href="research.html" class="drawer-research-link">research</a>
+          <button class="drawer-research-toggle" id="researchToggle"><span class="drawer-research-arrow">&#x203A;</span></button>
+        </div>
+        <div class="drawer-subnav" id="researchSubnav">
+          <a href="question.html">question</a>
+          <a href="tools.html">tools</a>
+          <a href="results.html">results</a>
+          <a href="interpretations.html">interpretations</a>
+        </div>
+      </li>
+        <li><a href="publications.html">publications</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <script>
+    // ── Drawer toggle ──
+    const drawer = document.getElementById('drawer');
+    const overlay = document.getElementById('drawerOverlay');
+
+    document.getElementById('menuBtn').addEventListener('click', function () {
+      drawer.classList.add('open');
+      overlay.classList.add('open');
+    });
+
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      overlay.classList.remove('open');
+    }
+
+    document.getElementById('closeBtn').addEventListener('click', closeDrawer);
+    overlay.addEventListener('click', closeDrawer);
+
+    // ── Drawer name cycle (roll) ──
+    (function () {
+      const names = ['Chris You', 'Dong Shin You', '유동신'];
+      const container = document.querySelector('.drawer-subtitle');
+      let index = 0;
+      let timer = null;
+      let rolling = false;
+
+      function roll() {
+        if (rolling) return;
+        rolling = true;
+        index = (index + 1) % names.length;
+
+        const outgoing = container.querySelector('span');
+        const incoming = document.createElement('span');
+        incoming.textContent = names[index];
+        incoming.style.transform = 'translateY(100%)';
+        incoming.style.opacity = '0';
+        incoming.style.transition = 'none';
+        container.appendChild(incoming);
+
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            outgoing.style.transition = 'transform 0.45s cubic-bezier(0.4,0,0.2,1), opacity 0.45s';
+            outgoing.style.transform = 'translateY(-100%)';
+            outgoing.style.opacity = '0';
+            incoming.style.transition = 'transform 0.45s cubic-bezier(0.4,0,0.2,1), opacity 0.45s';
+            incoming.style.transform = 'translateY(0)';
+            incoming.style.opacity = '1';
+            setTimeout(function () {
+              outgoing.remove();
+              rolling = false;
+            }, 460);
+          });
+        });
+      }
+
+      function stopCycle() {
+        clearInterval(timer);
+        timer = null;
+        rolling = false;
+        const spans = container.querySelectorAll('span');
+        spans.forEach(function (s, i) { if (i > 0) s.remove(); });
+      }
+
+      function startCycle() {
+        stopCycle();
+        container.innerHTML = '<span>' + names[0] + '</span>';
+        index = 0;
+        timer = setInterval(roll, 2200);
+      }
+
+      document.getElementById('menuBtn').addEventListener('click', startCycle);
+      document.getElementById('closeBtn').addEventListener('click', stopCycle);
+      document.getElementById('drawerOverlay').addEventListener('click', stopCycle);
+    })();
+
+    // ── Cell icon pulse ──
+    (function () {
+      const wrap = document.getElementById('menuBtn');
+      if (!wrap) return;
+      const icon = wrap.querySelector('svg');
+      if (!icon) return;
+
+      const BASE = 0.35;
+      const PEAK = 0.92;
+      const PULSE = 3000;
+      const LAG = 3500;
+
+      let hovered = false;
+      let start = null;
+
+      wrap.addEventListener('mouseenter', () => { hovered = true; });
+      wrap.addEventListener('mouseleave', () => { hovered = false; });
+
+      function tick(now) {
+        if (!start) start = now;
+        const elapsed = now - start;
+        const cycle = PULSE + LAG;
+        const t = elapsed % cycle;
+
+        let opacity;
+        if (hovered) {
+          opacity = PEAK;
+        } else if (t < PULSE) {
+          opacity = BASE + (PEAK - BASE) * Math.sin(Math.PI * t / PULSE);
+        } else {
+          opacity = BASE;
+        }
+
+        icon.style.opacity = opacity.toFixed(3);
+        requestAnimationFrame(tick);
+      }
+
+      requestAnimationFrame(tick);
+    })();
+  </script>
+  <script src="shared.js"></script>
+</body>
+
+</html>

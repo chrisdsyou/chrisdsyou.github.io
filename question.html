@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Question — Chris You</title>
+  <meta name="description" content="The research question behind Chris You's PhD — how does cell size control gene expression and biosynthesis?" />
+  <meta property="og:title" content="The Question – Chris You" />
+  <meta property="og:description" content="How does cell size control gene expression and biosynthesis?" />
+  <meta property="og:image" content="resources/shared/portrait_about_2.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="resources/shared/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Dancing+Script:wght@500&family=Montserrat:wght@300;400&family=Noto+Sans+KR:wght@300;400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="shared.css" />
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    html,
+    body {
+      min-height: 100%;
+      background: #faf9f5;
+      color: #2d2d2d;
+    }
+
+    body {
+      font-family: "Cormorant Garamond", Georgia, serif;
+    }
+
+    /* ── Header ── */
+    .q-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 3rem 7rem 1.75rem 4rem;
+      background: linear-gradient(to bottom, rgba(245, 241, 236, 0.97) 60%, rgba(245, 241, 236, 0));
+      pointer-events: none;
+    }
+
+    .q-label {
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #8a847c;
+    }
+
+    /* ── Fixed logo ── */
+    a.logo {
+      position: fixed;
+      top: 2.5rem;
+      left: 3.5rem;
+      z-index: 150;
+      display: inline-block;
+      line-height: 1;
+      text-decoration: none;
+      font-family: "Dancing Script", cursive;
+      font-size: 2.6rem;
+      font-weight: 500;
+      color: #6b93a8;
+      letter-spacing: 0.01em;
+    }
+
+    /* ── Fixed cell icon badge ── */
+    .cell-nav-wrap {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 82px;
+      height: 82px;
+      z-index: 150;
+      cursor: pointer;
+      background: rgba(41, 47, 54, 0.88);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      transition: background 0.2s;
+    }
+
+    .cell-nav-wrap:hover {
+      background: rgba(41, 47, 54, 1);
+    }
+
+    .cell-nav-svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      opacity: 0.7;
+    }
+
+    /* ── Hero ── */
+    .q-hero {
+      padding: 10rem 6rem 5rem 4rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .q-body {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-bottom: 8rem;
+    }
+
+    .q-eyebrow {
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #8a847c;
+      margin-bottom: 1.5rem;
+    }
+
+    .q-title {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(2.2rem, 3.6vw, 3.8rem);
+      font-weight: 300;
+      line-height: 1.1;
+      color: #2d2d2d;
+      letter-spacing: -0.01em;
+      margin-bottom: 2.5rem;
+    }
+
+    .q-rule {
+      width: 4rem;
+      height: 1px;
+      background: rgba(45, 45, 45, 0.15);
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── Body ── */
+    /* ── Sections — two-column grid ── */
+    .q-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+      margin-bottom: 5rem;
+    }
+
+    .q-section-label {
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.68rem;
+      font-weight: 400;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #8a847c;
+      margin-bottom: 1.25rem;
+    }
+
+    .q-h2 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(1.4rem, 2.2vw, 2rem);
+      font-weight: 300;
+      color: #2d2d2d;
+      line-height: 1.25;
+      margin-bottom: 1.25rem;
+    }
+
+    .q-p {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+      font-weight: 300;
+      line-height: 1.75;
+      color: #6a6560;
+      margin-bottom: 1.2rem;
+    }
+
+    .q-p:last-child {
+      margin-bottom: 0;
+    }
+
+    .q-highlight {
+      color: #2d2d2d;
+    }
+
+    .q-highlight a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: rgba(45, 45, 45, 0.3);
+      transition: color 0.2s;
+    }
+
+    .q-highlight a:hover {
+      color: #000000;
+    }
+
+    .q-standout {
+      color: #1a1a1a;
+      font-weight: 700;
+    }
+
+    /* ── Back link ── */
+    .q-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #8a847c;
+      text-decoration: none;
+      transition: color 0.2s;
+      margin-bottom: 2rem;
+    }
+
+    .q-back:hover {
+      color: #2d2d2d;
+    }
+
+    /* ── Superscript citations ── */
+    sup.q-cite {
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.58em;
+      color: #8a847c;
+      vertical-align: super;
+      line-height: 0;
+      letter-spacing: 0;
+    }
+
+    /* ── Figure panels ── */
+    .q-section-fig {
+      background: #e8e3dc;
+      border-radius: 8px;
+      padding: 1.75rem 1.5rem;
+      position: sticky;
+      top: 7rem;
+    }
+
+    .q-section-fig svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ── References ── */
+    .q-references {
+      margin-top: 5rem;
+      padding-top: 2rem;
+      border-top: 1px solid #ddd8d0;
+    }
+
+    .q-ref-label {
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #8a847c;
+      margin-bottom: 1.5rem;
+    }
+
+    .q-ref-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .q-ref-item {
+      display: flex;
+      gap: 1.25rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .q-ref-num {
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.65rem;
+      color: #8a847c;
+      min-width: 1.2rem;
+      padding-top: 0.22rem;
+      flex-shrink: 0;
+      text-align: right;
+    }
+
+    .q-ref-text {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 0.97rem;
+      font-weight: 300;
+      color: #6a6560;
+      line-height: 1.65;
+    }
+
+    .q-ref-link {
+      color: #6a6560;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: #c8c2bb;
+      transition: color 0.2s;
+    }
+
+    .q-ref-link:hover {
+      color: #2d2d2d;
+    }
+
+    @media (max-width: 768px) {
+      .q-header { padding: 1.25rem 5rem 1rem 1.5rem; }
+      .q-hero { padding: 5.5rem 1.5rem 2rem; }
+      .q-body { padding: 0 1.5rem 4rem; }
+      .q-title { font-size: clamp(1.8rem, 6vw, 2.8rem); }
+      .q-section { grid-template-columns: 1fr; gap: 2rem; }
+      .q-section-fig { position: static; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="logo" href="index.html" title="Home">chris you</a>
+
+  <div class="cell-nav-wrap" id="menuBtn" role="button" aria-label="Open navigation menu" tabindex="0">
+      <svg class="cell-nav-svg" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 276.8 257.7">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #231f20;
+        stroke-miterlimit: 10;
+        stroke-width: 8px;
+      }
+
+      .cls-3 {
+        fill: #231f20;
+      }
+
+      .cls-4, .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-4" d="M21.12,239.37c-19-18.36-25.62-61.92-1.85-82.42,21.24-18.69,53.99,1.77,71.87,20.93,21.42,16.64,43.69,45.97,24.1,63.49-22.13,19.33-71.59,13.84-94.13-2Z"/>
+    <path class="cls-1" d="M21.12,239.37c-19-18.36-25.62-61.92-1.85-82.42,21.24-18.69,53.99,1.77,71.87,20.93,21.42,16.64,43.69,45.97,24.1,63.49-22.13,19.33-71.59,13.84-94.13-2Z"/>
+  </g>
+  <g>
+    <g>
+      <path class="cls-4" d="M106.63,40.51c3.02,17.4-6.1,32.4-12.3,44.84-6.15,11.59-12.09,26.14-24.43,25.37-12.31-1.22-23.86-14.13-34.12-22.77-10.3-7.78-23.79-15.14-27.26-24.74-3.5-9.14,5.26-17.98,11.24-26.73,6.03-9.61,11.9-22.88,24.67-29.46C57.22,0,69.14,6.75,79.61,11.69c10.42,5.8,23.98,11.88,27.02,28.82Z"/>
+      <path class="cls-1" d="M106.63,40.51c3.02,17.4-6.1,32.4-12.3,44.84-6.15,11.59-12.09,26.14-24.43,25.37-12.31-1.22-23.86-14.13-34.12-22.77-10.3-7.78-23.79-15.14-27.26-24.74-3.5-9.14,5.26-17.98,11.24-26.73,6.03-9.61,11.9-22.88,24.67-29.46C57.22,0,69.14,6.75,79.61,11.69c10.42,5.8,23.98,11.88,27.02,28.82Z"/>
+    </g>
+    <circle class="cls-2" cx="66.51" cy="50.61" r="11.49"/>
+    <circle class="cls-3" cx="45.66" cy="34.7" r="5.48"/>
+    <circle class="cls-3" cx="37.62" cy="59.49" r="5.48"/>
+  </g>
+  <g>
+    <path class="cls-4" d="M270.83,190.51c-6.89,15.4-28.95,7.23-40.28,12.65-11.66,4.91-20.09,24.8-33.71,19.75-13.2-4.91-23.04-27.42-35.66-37.46-12.66-9.29-34.27-12.61-41.52-22.69-7.52-9.71,4.43-21.71,3.71-32.2-.7-10.17-14.93-22.08-8.32-32.16,6.65-10.82,29.31-14.05,40.81-22.74,11.91-9.66,20.49-32.37,34.64-37.5,13.72-4.98,23.71,14.52,36.6,19.57,12.85,5.79,35.03-1.93,42.05,12.42,7.21,15.49-5.47,41.58-5.18,60.2.29,18.05,13.78,44.02,6.85,60.16Z"/>
+    <path class="cls-1" d="M270.83,190.51c-6.89,15.4-28.95,7.23-40.28,12.65-11.66,4.91-20.09,24.8-33.71,19.75-13.2-4.91-23.04-27.42-35.66-37.46-12.66-9.29-34.27-12.61-41.52-22.69-7.52-9.71,4.43-21.71,3.71-32.2-.7-10.17-14.93-22.08-8.32-32.16,6.65-10.82,29.31-14.05,40.81-22.74,11.91-9.66,20.49-32.37,34.64-37.5,13.72-4.98,23.71,14.52,36.6,19.57,12.85,5.79,35.03-1.93,42.05,12.42,7.21,15.49-5.47,41.58-5.18,60.2.29,18.05,13.78,44.02,6.85,60.16Z"/>
+  </g>
+  <circle class="cls-2" cx="222.42" cy="141.79" r="23.07"/>
+  <circle class="cls-3" cx="174.28" cy="151.44" r="4.81"/>
+  <circle class="cls-3" cx="189.08" cy="96.85" r="4.81"/>
+  <circle class="cls-3" cx="181.57" cy="132.46" r="4.81"/>
+  <circle class="cls-3" cx="231.39" cy="104.05" r="4.81"/>
+  <circle class="cls-2" cx="51.14" cy="218.21" r="14.6"/>
+  <circle class="cls-3" cx="45.66" cy="179.31" r="4.81"/>
+  <circle class="cls-3" cx="80.98" cy="203.61" r="4.81"/>
+</svg>
+    </div>
+
+  <header class="q-header">
+    <span class="q-label">the question</span>
+  </header>
+
+  <div class="q-hero">
+    <a class="q-back" href="research.html">&#x2190;&nbsp; Research</a>
+    <h1 class="q-title">How does a cell remodel its proteome with cell size?</h1>
+    <div class="q-rule"></div>
+  </div>
+
+  <div class="q-body">
+
+    <!-- ── Motivation ── -->
+    <div class="q-section">
+      <div class="q-section-text">
+        <p class="q-section-label">Motivation</p>
+        <h2 class="q-h2">Cells grow to change their protein composition — but how? Does it matter?</h2>
+        <p class="q-p">
+          One of the most fundamental assumptions in cell biology is that as cells grow larger, the concentrations of
+          proteins and RNAs remain constant. The thought is that a large cell is just a bigger version of its smaller
+          self. This assumption underlies most models of cell-cycle control and homeostasis.
+        </p>
+        <p class="q-p">
+          We recently found that this assumption is not true.
+          Cells remodel their proteome as they get larger, such that individual proteins scale differently with size.
+          Bigger cells were also found to be less proliferative and more prone to DNA damage.<sup class="q-cite">1</sup>
+        </p>
+        <p class="q-p">
+          <span class="q-standout">How does the cell coordinate this differential scaling of individual proteins? Are
+            there other physiological consequences for the cell in becoming larger?</span>
+        </p>
+      </div>
+      <figure class="q-section-fig">
+        <!-- cells_differential_scaling -->
+        <svg id="ds-layer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 560.67 359.14">
+          <defs>
+            <style>
+              .ds-1 {
+                fill: url(#ds-lg2);
+              }
+
+              .ds-2 {
+                fill: #231f20;
+              }
+
+              .ds-2,
+              .ds-3,
+              .ds-4 {
+                font-family: ArialMT, Arial;
+                font-size: 29.81px;
+              }
+
+              .ds-5,
+              .ds-6,
+              .ds-7,
+              .ds-8 {
+                stroke-miterlimit: 10;
+                stroke-width: 5px;
+              }
+
+              .ds-5,
+              .ds-7,
+              .ds-8 {
+                fill: none;
+                stroke: #231f20;
+              }
+
+              .ds-3 {
+                fill: #2168ac;
+              }
+
+              .ds-6 {
+                fill: #ffe2b5;
+                stroke: #a69579;
+              }
+
+              .ds-7 {
+                stroke-dasharray: 10.32 10.32;
+              }
+
+              .ds-4 {
+                fill: #b3202c;
+              }
+
+              .ds-9 {
+                fill: #f15922;
+              }
+
+              .ds-8 {
+                stroke-dasharray: 10;
+              }
+
+              .ds-10 {
+                fill: url(#ds-lg);
+              }
+            </style>
+            <linearGradient id="ds-lg" x1="211.64" y1="335.87" x2="244.19" y2="210.33" gradientUnits="userSpaceOnUse">
+              <stop offset=".37" stop-color="#2168ac" />
+              <stop offset=".39" stop-color="#3072b1" />
+              <stop offset=".48" stop-color="#6697c6" />
+              <stop offset=".57" stop-color="#95b7d7" />
+              <stop offset=".66" stop-color="#bbd1e5" />
+              <stop offset=".75" stop-color="#d9e5f0" />
+              <stop offset=".83" stop-color="#eef3f8" />
+              <stop offset=".92" stop-color="#fafcfd" />
+              <stop offset="1" stop-color="#fff" />
+            </linearGradient>
+            <linearGradient id="ds-lg2" x1="246.57" y1="309.18" x2="201.85" y2="136.56" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#fff" />
+              <stop offset=".08" stop-color="#fdfbfb" />
+              <stop offset=".15" stop-color="#f9eff0" />
+              <stop offset=".22" stop-color="#f3dcde" />
+              <stop offset=".29" stop-color="#e9c1c4" />
+              <stop offset=".36" stop-color="#de9ea3" />
+              <stop offset=".43" stop-color="#cf737b" />
+              <stop offset=".49" stop-color="#be424c" />
+              <stop offset=".54" stop-color="#b3202c" />
+            </linearGradient>
+          </defs>
+          <line class="ds-5" x1="83.7" y1="128.91" x2="83.7" y2="359.14" />
+          <line class="ds-5" x1="83.3" y1="149.34" x2="363.33" y2="149.34" />
+          <line class="ds-5" x1="219.31" y1="151.84" x2="219.31" y2="131.41" />
+          <line class="ds-5" x1="363.08" y1="151.84" x2="363.08" y2="131.41" />
+          <text class="ds-2" transform="translate(67.96 118.02)">
+            <tspan x="0" y="0">1x</tspan>
+          </text>
+          <text class="ds-2" transform="translate(194.13 118.02)">
+            <tspan x="0" y="0">1.5x</tspan>
+          </text>
+          <text class="ds-2" transform="translate(345.17 118.02)">
+            <tspan x="0" y="0">2x</tspan>
+          </text>
+          <text class="ds-2" transform="translate(385.2 118.02)">
+            <tspan x="0" y="0">: Cell size</tspan>
+          </text>
+          <g>
+            <text class="ds-2" transform="translate(25.59 295.92) rotate(-90)">
+              <tspan x="0" y="0">Protein</tspan>
+            </text>
+            <text class="ds-2" transform="translate(59.94 341.5) rotate(-90)">
+              <tspan x="0" y="0">Concentration</tspan>
+            </text>
+          </g>
+          <text class="ds-4" transform="translate(378.38 188.54)">
+            <tspan x="0" y="0">Super-scaling</tspan>
+          </text>
+          <text class="ds-2" transform="translate(378.38 263.07)">
+            <tspan x="0" y="0">Scaling</tspan>
+          </text>
+          <text class="ds-3" transform="translate(378.38 339.4)">
+            <tspan x="0" y="0">Sub-scaling</tspan>
+          </text>
+          <path class="ds-6"
+            d="M104.84,71.48c0,4.08,9.34,11.77,7.43,15.07-1.97,3.4-15.61-4.76-19.01-2.8-3.29,1.91-3,2.32-7.07,2.32s-3.67-.6-6.97-2.5c-3.4-1.97-18.13,6.95-20.1,3.55-1.91-3.29-4.25-11.56-4.25-15.63s6.93-9.69,8.84-12.98c1.97-3.4,5.58-8.43,8.98-10.39,3.29-1.91,9.42,1.8,13.5,1.8s5.94,3.67,9.23,5.57c3.4,1.97,5.99,2.68,7.96,6.08,1.91,3.29,1.45,5.85,1.45,9.92Z" />
+          <circle class="ds-9" cx="80.57" cy="68.12" r="7.47" />
+          <path class="ds-6"
+            d="M252.88,64.6c0,5.78,13.25,16.7,10.55,21.37-2.79,4.82-22.14-6.76-26.96-3.97-4.67,2.7-4.25,3.29-10.04,3.29s-5.21-.85-9.88-3.55c-4.82-2.79-25.72,9.86-28.51,5.04-2.7-4.67-6.03-16.39-6.03-22.18s9.84-13.74,12.54-18.42c2.79-4.82,7.92-11.95,12.74-14.74,4.67-2.7,13.37,2.55,19.15,2.55s8.43,5.2,13.1,7.91c4.82,2.79,8.5,3.8,11.29,8.62,2.7,4.67,2.06,8.29,2.06,14.08Z" />
+          <circle class="ds-9" cx="218.46" cy="59.84" r="10.6" />
+          <path class="ds-6"
+            d="M406.83,53.14c0,8.63,19.77,24.93,15.74,31.9-4.16,7.19-33.05-10.08-40.24-5.92-6.97,4.03-6.34,4.91-14.98,4.91s-7.78-1.26-14.75-5.3-38.39,14.71-42.55,7.52c-4.03-6.97-9-24.47-9-33.1s14.68-20.51,18.71-27.48c4.16-7.19,11.82-17.84,19.01-22,6.97-4.03,19.95,3.81,28.58,3.81s12.58,7.77,19.55,11.8c7.19,4.16,12.69,5.68,16.85,12.87,4.03,6.97,3.08,12.38,3.08,21.01Z" />
+          <circle class="ds-9" cx="355.46" cy="46.03" r="15.82" />
+          <g>
+            <polyline class="ds-10" points="83.5 255.2 362.28 255.2 362.28 329.74 83.5 255.2" />
+            <polyline class="ds-1" points="83.5 255.04 362.28 255.04 362.28 180.5 83.5 255.04" />
+          </g>
+          <g>
+            <line class="ds-5" x1="83.5" y1="255.2" x2="88.33" y2="253.91" />
+            <line class="ds-7" x1="98.3" y1="251.24" x2="352.47" y2="183.13" />
+            <line class="ds-5" x1="357.45" y1="181.79" x2="362.28" y2="180.5" />
+          </g>
+          <line class="ds-8" x1="83.5" y1="255.2" x2="362.28" y2="255.2" />
+          <line class="ds-8" x1="362.28" y1="329.74" x2="83.5" y2="255.2" />
+        </svg>
+      </figure>
+    </div>
+
+    <!-- ── Why it matters ── -->
+    <div class="q-section">
+      <div class="q-section-text">
+        <p class="q-section-label">Why it matters</p>
+        <h2 class="q-h2">Cell size itself may be a driver of senescence, not just a bystander</h2>
+        <p class="q-p">
+          Senescent cells — cells that have permanently exited the cell cycle — are characteristically
+          large. The conventional interpretation is that this is a passive consequence: cells that stop
+          dividing continue to grow, accumulating mass without distributing it.
+        </p>
+        <p class="q-p">
+          Previous findings in our lab challenge this view.<sup class="q-cite">1,2,3</sup> Concentration changes across
+          the proteome resemble those of senescent cells even in a near twofold size range. This raises the possibility
+          that <span class="q-standout">large size is not merely a result of senescence — it actively drives the cell
+            towards it.</span>
+        </p>
+        <p class="q-p">
+          Through our work, we found that the change in transcription is the root cause of senescence-like
+          proteome remodeling.<sup class="q-cite">4</sup> We also find clues for molecular players that may be involved
+          in
+          this size-dependent regulation of transcription, and show that scaling transcription may be achieved by
+          scaling of productive transcription time. Finally, we also find that organelles in large cells,
+          specifically lysosomes, can be made vulnerable to perturbation, which may be useful for combination
+          therapies targeting cancer cells.
+          <span class="q-highlight"><a href="interpretations.html">See Interpretations</a></span>.
+        </p>
+      </div>
+      <figure class="q-section-fig">
+        <!-- cell_growth_senescence -->
+        <svg id="cgs-layer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 881.02 466.62">
+          <defs>
+            <style>
+              .cgs-1,
+              .cgs-2 {
+                fill: none;
+              }
+
+              .cgs-1,
+              .cgs-2,
+              .cgs-3 {
+                stroke: #231f20;
+                stroke-miterlimit: 10;
+              }
+
+              .cgs-1,
+              .cgs-3 {
+                stroke-width: 8px;
+              }
+
+              .cgs-4,
+              .cgs-5 {
+                fill: #231f20;
+              }
+
+              .cgs-5 {
+                font-family: ArialMT, Arial;
+                font-size: 50px;
+              }
+
+              .cgs-2 {
+                stroke-width: 10px;
+              }
+
+              .cgs-6,
+              .cgs-3 {
+                fill: #fff;
+              }
+            </style>
+          </defs>
+          <g>
+            <g>
+              <g>
+                <path class="cgs-6"
+                  d="M117.71,232.53c.25,17.82-11.07,28.69-19.26,38.05-8.14,8.43-16.72,19.26-29.43,15.02s-22.18-17.71-30.97-27.08c-8.85-8.43-20.87-16.65-21.62-26s10.42-17.56,18.56-26c8.19-9.37,16.93-22.84,30.14-27.08s22.84,6.59,31.68,15.02c8.79,9.37,20.66,20.23,20.91,38.05Z" />
+                <path class="cgs-1"
+                  d="M117.71,232.53c.25,17.82-11.07,28.69-19.26,38.05-8.14,8.43-16.72,19.26-29.43,15.02s-22.18-17.71-30.97-27.08c-8.85-8.43-20.87-16.65-21.62-26s10.42-17.56,18.56-26c8.19-9.37,16.93-22.84,30.14-27.08s22.84,6.59,31.68,15.02c8.79,9.37,20.66,20.23,20.91,38.05Z" />
+              </g>
+              <circle class="cgs-3" cx="78.22" cy="230.89" r="11.49" />
+              <circle class="cgs-4" cx="61.25" cy="210.88" r="5.48" />
+              <circle class="cgs-4" cx="48.09" cy="233.38" r="5.48" />
+            </g>
+            <g>
+              <g>
+                <path class="cgs-6"
+                  d="M449.46,229.08c.31,19.84-19.86,30.52-26.23,44.78-6.53,14.1-3.75,42.37-15.34,47.7-11.2,4.58-29.33-15.04-43.51-18.8-14.18-3.76-31.21,3.39-42.99-6.16-12.19-9.25-11.33-27.52-18.9-38.62-7.38-10.17-28.34-18.49-29.28-28.9-.94-10.41,19.08-18.73,25.18-28.9,6.34-11.1,2.89-29.37,14.74-38.62,11.52-9.55,30.48-2.4,45.16-6.16,14.68-3.76,32.53-23.38,44.64-18.8,12.45,5.33,10.93,33.6,18.3,47.7,7.11,14.26,27.91,24.93,28.23,44.77Z" />
+                <path class="cgs-1"
+                  d="M449.46,229.08c.31,19.84-19.86,30.52-26.23,44.78-6.53,14.1-3.75,42.37-15.34,47.7-11.2,4.58-29.33-15.04-43.51-18.8-14.18-3.76-31.21,3.39-42.99-6.16-12.19-9.25-11.33-27.52-18.9-38.62-7.38-10.17-28.34-18.49-29.28-28.9-.94-10.41,19.08-18.73,25.18-28.9,6.34-11.1,2.89-29.37,14.74-38.62,11.52-9.55,30.48-2.4,45.16-6.16,14.68-3.76,32.53-23.38,44.64-18.8,12.45,5.33,10.93,33.6,18.3,47.7,7.11,14.26,27.91,24.93,28.23,44.77Z" />
+              </g>
+              <circle class="cgs-3" cx="384.86" cy="221.77" r="23.07" />
+              <circle class="cgs-4" cx="347.95" cy="254.14" r="4.81" />
+              <circle class="cgs-4" cx="333.55" cy="199.44" r="4.81" />
+              <circle class="cgs-4" cx="344.81" cy="234.05" r="4.81" />
+              <circle class="cgs-4" cx="373.83" cy="184.58" r="4.81" />
+            </g>
+            <g>
+              <line class="cgs-1" x1="143.54" y1="238.86" x2="211.42" y2="238.86" />
+              <path class="cgs-4"
+                d="M230.73,238.86c-9.09,3.37-20.36,9.12-27.35,15.22l5.5-15.22-5.5-15.22c6.99,6.09,18.26,11.85,27.35,15.22Z" />
+            </g>
+          </g>
+          <g>
+            <line class="cgs-1" x1="478.39" y1="238.86" x2="546.26" y2="238.86" />
+            <path class="cgs-4"
+              d="M565.57,238.86c-9.09,3.37-20.36,9.12-27.35,15.22l5.5-15.22-5.5-15.22c6.99,6.09,18.26,11.85,27.35,15.22Z" />
+          </g>
+          <g>
+            <g>
+              <path class="cgs-6"
+                d="M877.02,224.51c.09,5.95-11.15,8-12.64,13.21-1.46,5.06-2.25,8.73-4.65,13.31-2.3,4.36,1.78,15.56-.88,19.62-2.66,4.03-3.65,9.86-6.16,13.77-2.66,4.1-10.19,2.66-12.09,6.85-1.92,4.19,2.46,13.16,1,18.08-1.4,4.66-11.3,3.73-12.61,8.41-1.32,4.69,1.18,11.89-.4,16.18-1.66,4.49,2.41,15.6.09,19-2.42,3.5-10.45.7-14.02,2.26-3.55,1.51-7.89,1.73-12.05,1.07-3.93-.64-7.97-8.59-12.26-10.3-4.03-1.6-8.54,2.32-12.72.29-4.1-1.98-7.78-8.54-11.87-10.3-4.21-1.8-8.66,2.14-12.68.98s-7.6-.04-11.76-.66c-4.04-.61-8.85-5.17-12.89-5.65-4.11-.5-8.31-2.04-12.3-2.83-4.25-.84-8.31,1.51-12.29-.12-4.2-1.71-7.65-6.42-11.38-9.36-3.76-2.91-5.44-6.45-8.15-10.07-2.6-3.42-10.94-5.67-12.95-9.41-1.9-3.52-2.12-7.61-3.79-11.23-1.66-3.56,3.61-8.09,1.89-11.57-1.81-3.61-2.74-8.09-4.96-11.26-2.2-3.11-13.98-2.2-16.93-5.21-2.78-2.79.88-9.36-2.05-12.13-2.93-2.72-11.99-2.14-14.58-4.83-2.7-2.76,2.15-8.23.36-11.12-1.83-2.93-7.96-4.86-8.24-7.99s3.52-5.58,4.86-8.47c1.31-2.86,3.27-5.24,5.55-8.01,2.19-2.7,4.25-5.43,6.82-8.12,2.57-2.74,6.64-4.8,9.08-7.59,2.58-3.01-1.45-8.64.38-11.69,1.85-3.1.69-6.42,2.07-9.93,1.32-3.38,3.17-6.69,4.42-10.22,1.25-3.59,8.79-6.59,10.32-10.14,1.62-3.77,2.64-7.56,4.96-10.96,2.43-3.59,5.8-6.46,9.46-9.35,3.64-2.91,7.48-4.61,11.79-6.25,4.08-1.56,8.39-6.71,12.85-7.57,4.19-.8,9.21-5.27,13.55-5.81,4.26-.52,8.22.35,12.46-.25,4.37-.61,8.05,3.44,12.22,2.32s8.01-4.07,12.32-5.9c4.19-1.79,8.06-5.15,12.26-7.13,4.28-2.03,9.12-1.73,13.27-3.36,4.42-1.75,8.59,4.71,12.7,4.17,4.35-.57,6.7-.83,10.52.74,3.84,1.62,5.2,3.73,7.92,7.21,2.61,3.38,6.35,4.72,8.3,9.2,1.85,4.29,3.33,8.75,4.93,13.47,1.59,4.71,4.31,8.82,5.96,13.44,1.73,4.88,9.67,4.48,11.81,8.71,2.13,4.24,5.78,5.69,8.66,9.81,2.71,3.93-3.36,18.62-.51,22.66,2.84,4.08,9.49,3.71,11.97,8.11,2.58,4.63,6.09,8.94,7.73,14.08,1.67,5.29,5.25,11.85,5.35,17.8Z" />
+              <path class="cgs-1"
+                d="M877.02,224.51c.09,5.95-11.15,8-12.64,13.21-1.46,5.06-2.25,8.73-4.65,13.31-2.3,4.36,1.78,15.56-.88,19.62-2.66,4.03-3.65,9.86-6.16,13.77-2.66,4.1-10.19,2.66-12.09,6.85-1.92,4.19,2.46,13.16,1,18.08-1.4,4.66-11.3,3.73-12.61,8.41-1.32,4.69,1.18,11.89-.4,16.18-1.66,4.49,2.41,15.6.09,19-2.42,3.5-10.45.7-14.02,2.26-3.55,1.51-7.89,1.73-12.05,1.07-3.93-.64-7.97-8.59-12.26-10.3-4.03-1.6-8.54,2.32-12.72.29-4.1-1.98-7.78-8.54-11.87-10.3-4.21-1.8-8.66,2.14-12.68.98s-7.6-.04-11.76-.66c-4.04-.61-8.85-5.17-12.89-5.65-4.11-.5-8.31-2.04-12.3-2.83-4.25-.84-8.31,1.51-12.29-.12-4.2-1.71-7.65-6.42-11.38-9.36-3.76-2.91-5.44-6.45-8.15-10.07-2.6-3.42-10.94-5.67-12.95-9.41-1.9-3.52-2.12-7.61-3.79-11.23-1.66-3.56,3.61-8.09,1.89-11.57-1.81-3.61-2.74-8.09-4.96-11.26-2.2-3.11-13.98-2.2-16.93-5.21-2.78-2.79.88-9.36-2.05-12.13-2.93-2.72-11.99-2.14-14.58-4.83-2.7-2.76,2.15-8.23.36-11.12-1.83-2.93-7.96-4.86-8.24-7.99s3.52-5.58,4.86-8.47c1.31-2.86,3.27-5.24,5.55-8.01,2.19-2.7,4.25-5.43,6.82-8.12,2.57-2.74,6.64-4.8,9.08-7.59,2.58-3.01-1.45-8.64.38-11.69,1.85-3.1.69-6.42,2.07-9.93,1.32-3.38,3.17-6.69,4.42-10.22,1.25-3.59,8.79-6.59,10.32-10.14,1.62-3.77,2.64-7.56,4.96-10.96,2.43-3.59,5.8-6.46,9.46-9.35,3.64-2.91,7.48-4.61,11.79-6.25,4.08-1.56,8.39-6.71,12.85-7.57,4.19-.8,9.21-5.27,13.55-5.81,4.26-.52,8.22.35,12.46-.25,4.37-.61,8.05,3.44,12.22,2.32s8.01-4.07,12.32-5.9c4.19-1.79,8.06-5.15,12.26-7.13,4.28-2.03,9.12-1.73,13.27-3.36,4.42-1.75,8.59,4.71,12.7,4.17,4.35-.57,6.7-.83,10.52.74,3.84,1.62,5.2,3.73,7.92,7.21,2.61,3.38,6.35,4.72,8.3,9.2,1.85,4.29,3.33,8.75,4.93,13.47,1.59,4.71,4.31,8.82,5.96,13.44,1.73,4.88,9.67,4.48,11.81,8.71,2.13,4.24,5.78,5.69,8.66,9.81,2.71,3.93-3.36,18.62-.51,22.66,2.84,4.08,9.49,3.71,11.97,8.11,2.58,4.63,6.09,8.94,7.73,14.08,1.67,5.29,5.25,11.85,5.35,17.8Z" />
+            </g>
+            <g>
+              <polygon class="cgs-6"
+                points="816.66 213.97 813.89 221.2 810.63 227.66 808.39 234.86 801.26 237.89 796.09 242.84 790.06 248.48 782.19 244.68 774.82 246.26 767.3 244.88 759.17 242.83 753.51 236.84 754.43 227.33 750.02 221.31 749.62 213.97 750.03 206.63 754.92 200.84 755.29 192.52 759.55 185.58 767.93 184.36 774.37 179.73 782.19 179.17 790 179.74 796.3 184.66 805.05 185.3 805.87 195.08 811.1 200.04 815.16 206.44 816.66 213.97" />
+              <polygon class="cgs-1"
+                points="816.66 213.97 813.89 221.2 810.63 227.66 808.39 234.86 801.26 237.89 796.09 242.84 790.06 248.48 782.19 244.68 774.82 246.26 767.3 244.88 759.17 242.83 753.51 236.84 754.43 227.33 750.02 221.31 749.62 213.97 750.03 206.63 754.92 200.84 755.29 192.52 759.55 185.58 767.93 184.36 774.37 179.73 782.19 179.17 790 179.74 796.3 184.66 805.05 185.3 805.87 195.08 811.1 200.04 815.16 206.44 816.66 213.97" />
+            </g>
+            <circle class="cgs-4" cx="728.43" cy="261.12" r="7.01" />
+            <circle class="cgs-4" cx="707.47" cy="181.44" r="7.01" />
+            <circle class="cgs-4" cx="723.86" cy="231.86" r="7.01" />
+            <circle class="cgs-4" cx="766.12" cy="159.81" r="7.01" />
+            <circle class="cgs-4" cx="674.97" cy="224.85" r="7.01" />
+            <circle class="cgs-4" cx="794.31" cy="290.37" r="7.01" />
+            <circle class="cgs-4" cx="822.79" cy="255.33" r="7.01" />
+          </g>
+          <text class="cgs-5" transform="translate(62.44 42.91)">
+            <tspan x="0" y="0">Non-senescent</tspan>
+          </text>
+          <text class="cgs-5" transform="translate(619.92 42.91)">
+            <tspan x="0" y="0">Senescent</tspan>
+          </text>
+          <line class="cgs-2" y1="374.65" x2="461.19" y2="374.65" />
+          <text class="cgs-5" transform="translate(27.71 450.39)">
+            <tspan x="0" y="0">Natural size range</tspan>
+          </text>
+        </svg>
+      </figure>
+    </div>
+
+    <!-- ── The approach ── -->
+    <div class="q-section">
+      <div class="q-section-text">
+        <p class="q-section-label">The approach</p>
+        <h2 class="q-h2">Dissecting the gene expression pathway across cell size</h2>
+        <p class="q-p">
+          Using genetically engineered cells of different sizes, we asked:
+          <span class="q-highlight">how does each step of gene expression change with cell size?</span>
+          Transcription (MS2 live imaging), mRNA stability (SLAMseq),
+          and protein turnover (pulse-SILAC-TMT) were each measured
+          independently. <span class="q-highlight"><a href="tools.html">See Tools</a></span>.
+          Our results suggest that size-dependent transcription is the primary
+          source of proteome remodeling.
+          <span class="q-highlight"><a href="results.html">See Results</a></span>.
+        </p>
+      </div>
+      <figure class="q-section-fig">
+        <!-- gene_expression -->
+        <svg id="ge-layer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 618.17 253.61">
+          <defs>
+            <style>
+              .ge-1,
+              .ge-2 {
+                fill: #231f20;
+              }
+
+              .ge-3 {
+                stroke: #231f20;
+              }
+
+              .ge-3,
+              .ge-4 {
+                fill: none;
+                stroke-miterlimit: 10;
+                stroke-width: 5px;
+              }
+
+              .ge-5,
+              .ge-6 {
+                fill: #ed1c24;
+              }
+
+              .ge-2,
+              .ge-6 {
+                font-family: ArialMT, Arial;
+                font-size: 37.95px;
+              }
+
+              .ge-4 {
+                stroke: #ed1c24;
+              }
+
+              .ge-7 {
+                letter-spacing: -.06em;
+              }
+            </style>
+          </defs>
+          <text class="ge-2" transform="translate(0 34.01)">
+            <tspan x="0" y="0">DN</tspan>
+            <tspan class="ge-7" x="54.81" y="0">A</tspan>
+            <tspan x="78.03" y="0"> </tspan>
+          </text>
+          <text class="ge-2" transform="translate(236.4 33.3)">
+            <tspan x="0" y="0">mRN</tspan>
+            <tspan class="ge-7" x="86.43" y="0">A</tspan>
+          </text>
+          <text class="ge-2" transform="translate(496.25 32.57)">
+            <tspan x="0" y="0">Protein</tspan>
+          </text>
+          <g>
+            <line class="ge-3" x1="118.54" y1="23" x2="177.63" y2="23" />
+            <path class="ge-1"
+              d="M171.35,23l-7.67-12.61.43-.29,20.56,8.17c7.16,1.58,14.33,3.15,21.49,4.73-7.16,1.58-14.33,3.15-21.49,4.73l-20.56,8.17-.43-.22,7.67-12.68Z" />
+          </g>
+          <g>
+            <line class="ge-3" x1="378.39" y1="23" x2="437.48" y2="23" />
+            <path class="ge-1"
+              d="M431.2,23l-7.67-12.61.43-.29,20.56,8.17c7.16,1.58,14.33,3.15,21.49,4.73-7.16,1.58-14.33,3.15-21.49,4.73l-20.56,8.17-.43-.22,7.67-12.68Z" />
+          </g>
+          <g>
+            <line class="ge-3" x1="296.92" y1="55.14" x2="296.92" y2="93.37" />
+            <path class="ge-1"
+              d="M296.92,87.09l12.61-7.67.29.43-8.17,20.56c-1.58,7.16-3.15,14.33-4.73,21.49-1.58-7.16-3.15-14.33-4.73-21.49l-8.17-20.56.22-.43,12.68,7.67Z" />
+          </g>
+          <g>
+            <line class="ge-3" x1="557.21" y1="55.14" x2="557.21" y2="93.37" />
+            <path class="ge-1"
+              d="M557.21,87.09l12.61-7.67.29.43-8.17,20.56c-1.58,7.16-3.15,14.33-4.73,21.49-1.58-7.16-3.15-14.33-4.73-21.49l-8.17-20.56.22-.43,12.68,7.67Z" />
+          </g>
+          <text class="ge-2" transform="translate(284.22 167.35)">
+            <tspan x="0" y="0">Ø</tspan>
+          </text>
+          <text class="ge-2" transform="translate(544.04 163.61)">
+            <tspan x="0" y="0">Ø</tspan>
+          </text>
+          <text class="ge-2" transform="translate(292.28 241.28)">
+            <tspan x="0" y="0">Cell size</tspan>
+          </text>
+          <text class="ge-6" transform="translate(412.16 151.77)">
+            <tspan x="0" y="0">?</tspan>
+          </text>
+          <text class="ge-6" transform="translate(178.15 148.69)">
+            <tspan x="0" y="0">?</tspan>
+          </text>
+          <text class="ge-6" transform="translate(97.03 193.22)">
+            <tspan x="0" y="0">?</tspan>
+          </text>
+          <text class="ge-6" transform="translate(499.17 202.25)">
+            <tspan x="0" y="0">?</tspan>
+          </text>
+          <g>
+            <line class="ge-4" x1="454.52" y1="202.25" x2="514.3" y2="118.48" />
+            <path class="ge-5"
+              d="M526.57,101.28c-2.77,10.23-4.81,23.93-3.83,34.02l-10.05-14.57-17.04-4.77c9.87-2.35,22.15-8.73,30.92-14.68Z" />
+          </g>
+          <g>
+            <line class="ge-4" x1="378.39" y1="193.22" x2="404.16" y2="77.45" />
+            <path class="ge-5"
+              d="M408.76,56.84c1.44,10.5,4.9,23.91,9.75,32.82l-14.94-9.49-17.55,2.26c8.17-6.01,16.99-16.68,22.75-25.58Z" />
+          </g>
+          <g>
+            <path class="ge-4" d="M274.62,213.66c-69.24-40.46-81.65-78.28-27.45-113" />
+            <path class="ge-5"
+              d="M265.58,90.26c-6.79,8.14-14.37,19.73-17.69,29.31l-3.05-17.44-13.5-11.45c9.95,1.98,23.77,1.32,34.23-.43Z" />
+          </g>
+          <g>
+            <path class="ge-4" d="M274.62,231.17c-127.33-42.97-184.41-95.64-130.91-163.57" />
+            <path class="ge-5"
+              d="M157.81,51.87c-3.8,9.9-7.24,23.31-7.29,33.45l-8.51-15.52-16.47-6.48c10.05-1.33,22.93-6.42,32.26-11.44Z" />
+          </g>
+        </svg>
+      </figure>
+    </div>
+
+    <!-- ── References ── -->
+    <div class="q-references">
+      <p class="q-ref-label">References</p>
+      <ol class="q-ref-list">
+        <li class="q-ref-item">
+          <span class="q-ref-num">1.</span>
+          <span class="q-ref-text">
+            Lanz, M.C. et al. Increasing cell size remodels the proteome and promotes senescence.
+            <em>Mol. Cell</em> <strong>82</strong>, 3255–3269 (2022).
+            <a class="q-ref-link" href="https://www.cell.com/molecular-cell/fulltext/S1097-2765(22)00713-4"
+              target="_blank" rel="noopener">https://doi.org/10.1016/j.molcel.2022.07.017</a>
+          </span>
+        </li>
+        <li class="q-ref-item">
+          <span class="q-ref-num">2.</span>
+          <span class="q-ref-text">
+            Zatulovskiy, E. et al. Delineation of proteome changes driven by cell size and growth rate.
+            <em>Front. Cell Dev. Biol.</em> <strong>10</strong>, 980721 (2022).
+            <a class="q-ref-link"
+              href="https://www.frontiersin.org/journals/cell-and-developmental-biology/articles/10.3389/fcell.2022.980721/full"
+              target="_blank" rel="noopener">https://doi.org/10.3389/fcell.2022.980721</a>
+          </span>
+        </li>
+        <li class="q-ref-item">
+          <span class="q-ref-num">3.</span>
+          <span class="q-ref-text">
+            Lanz, M.C. et al. Genome dilution by cell growth drives starvation-like proteome remodeling
+            in mammalian and yeast cells.
+            <em>Nat. Struct. Mol. Biol.</em> <strong>31</strong>, 1859–1871 (2024).
+            <a class="q-ref-link" href="https://www.nature.com/articles/s41594-024-01353-z" target="_blank"
+              rel="noopener">https://doi.org/10.1038/s41594-024-01353-z</a>
+          </span>
+        </li>
+        <li class="q-ref-item">
+          <span class="q-ref-num">4.</span>
+          <span class="q-ref-text">
+            You, D.S. et al. Cell size-dependent mRNA transcription drives proteome remodeling.
+            <em>bioRxiv</em> (2025).
+            <a class="q-ref-link" href="https://www.biorxiv.org/content/10.1101/2025.10.30.685141v1" target="_blank"
+              rel="noopener">https://doi.org/10.1101/2025.10.30.685141</a>
+          </span>
+        </li>
+      </ol>
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    <span>&copy; 2026 Dong Shin (Chris) You. All rights reserved.</span>
+  </footer>
+
+  <!-- Drawer overlay -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <!-- Navigation drawer -->
+  <div class="drawer" id="drawer">
+    <button class="close-btn" id="closeBtn" aria-label="Close menu">&#x2715;</button>
+    <div class="drawer-subtitle"><span id="drawerName">Chris You</span></div>
+    <nav>
+      <ul>
+        <li><a href="index.html#about">about</a></li>
+        <li><a href="cv.html">cv</a></li>
+        <li>
+        <div class="drawer-research-row">
+          <a href="research.html" class="drawer-research-link">research</a>
+          <button class="drawer-research-toggle" id="researchToggle"><span class="drawer-research-arrow">&#x203A;</span></button>
+        </div>
+        <div class="drawer-subnav" id="researchSubnav">
+          <a href="question.html">question</a>
+          <a href="tools.html">tools</a>
+          <a href="results.html">results</a>
+          <a href="interpretations.html">interpretations</a>
+        </div>
+      </li>
+        <li><a href="publications.html">publications</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const drawer = document.getElementById('drawer');
+    const overlay = document.getElementById('drawerOverlay');
+
+    document.getElementById('menuBtn').addEventListener('click', function () {
+      drawer.classList.add('open');
+      overlay.classList.add('open');
+    });
+
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      overlay.classList.remove('open');
+    }
+
+    document.getElementById('closeBtn').addEventListener('click', closeDrawer);
+    overlay.addEventListener('click', closeDrawer);
+
+    // ── Drawer name cycle (roll) ──
+    (function () {
+      const names = ['Chris You', 'Dong Shin You', '유동신'];
+      const container = document.querySelector('.drawer-subtitle');
+      let index = 0;
+      let timer = null;
+      let rolling = false;
+
+      function roll() {
+        if (rolling) return;
+        rolling = true;
+        index = (index + 1) % names.length;
+        const outgoing = container.querySelector('span');
+        const incoming = document.createElement('span');
+        incoming.textContent = names[index];
+        incoming.style.transform = 'translateY(100%)';
+        incoming.style.opacity = '0';
+        incoming.style.transition = 'none';
+        container.appendChild(incoming);
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            outgoing.style.transition = 'transform 0.45s cubic-bezier(0.4,0,0.2,1), opacity 0.45s';
+            outgoing.style.transform = 'translateY(-100%)';
+            outgoing.style.opacity = '0';
+            incoming.style.transition = 'transform 0.45s cubic-bezier(0.4,0,0.2,1), opacity 0.45s';
+            incoming.style.transform = 'translateY(0)';
+            incoming.style.opacity = '1';
+            setTimeout(function () { outgoing.remove(); rolling = false; }, 460);
+          });
+        });
+      }
+
+      function stopCycle() {
+        clearInterval(timer); timer = null; rolling = false;
+        container.querySelectorAll('span').forEach(function (s, i) { if (i > 0) s.remove(); });
+      }
+
+      function startCycle() {
+        stopCycle();
+        container.innerHTML = '<span>' + names[0] + '</span>';
+        index = 0;
+        timer = setInterval(roll, 2200);
+      }
+
+      document.getElementById('menuBtn').addEventListener('click', startCycle);
+      document.getElementById('closeBtn').addEventListener('click', stopCycle);
+      document.getElementById('drawerOverlay').addEventListener('click', stopCycle);
+    })();
+    }); // end DOMContentLoaded
+  </script>
+  <script src="shared.js"></script>
+</body>
+
+</html>

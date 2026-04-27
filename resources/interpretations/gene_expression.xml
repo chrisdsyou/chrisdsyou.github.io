@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 618.17 253.61">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #231f20;
+      }
+
+      .cls-3 {
+        stroke: #231f20;
+      }
+
+      .cls-3, .cls-4 {
+        fill: none;
+        stroke-miterlimit: 10;
+        stroke-width: 5px;
+      }
+
+      .cls-5, .cls-6 {
+        fill: #ed1c24;
+      }
+
+      .cls-2, .cls-6 {
+        font-family: ArialMT, Arial;
+        font-size: 37.95px;
+      }
+
+      .cls-4 {
+        stroke: #ed1c24;
+      }
+
+      .cls-7 {
+        letter-spacing: -.06em;
+      }
+    </style>
+  </defs>
+  <text class="cls-2" transform="translate(0 34.01)"><tspan x="0" y="0">DN</tspan><tspan class="cls-7" x="54.81" y="0">A</tspan><tspan x="78.03" y="0"> </tspan></text>
+  <text class="cls-2" transform="translate(236.4 33.3)"><tspan x="0" y="0">mRN</tspan><tspan class="cls-7" x="86.43" y="0">A</tspan></text>
+  <text class="cls-2" transform="translate(496.25 32.57)"><tspan x="0" y="0">Protein</tspan></text>
+  <g>
+    <line class="cls-3" x1="118.54" y1="23" x2="177.63" y2="23"/>
+    <path class="cls-1" d="M171.35,23l-7.67-12.61.43-.29,20.56,8.17c7.16,1.58,14.33,3.15,21.49,4.73-7.16,1.58-14.33,3.15-21.49,4.73l-20.56,8.17-.43-.22,7.67-12.68Z"/>
+  </g>
+  <g>
+    <line class="cls-3" x1="378.39" y1="23" x2="437.48" y2="23"/>
+    <path class="cls-1" d="M431.2,23l-7.67-12.61.43-.29,20.56,8.17c7.16,1.58,14.33,3.15,21.49,4.73-7.16,1.58-14.33,3.15-21.49,4.73l-20.56,8.17-.43-.22,7.67-12.68Z"/>
+  </g>
+  <g>
+    <line class="cls-3" x1="296.92" y1="55.14" x2="296.92" y2="93.37"/>
+    <path class="cls-1" d="M296.92,87.09l12.61-7.67.29.43-8.17,20.56c-1.58,7.16-3.15,14.33-4.73,21.49-1.58-7.16-3.15-14.33-4.73-21.49l-8.17-20.56.22-.43,12.68,7.67Z"/>
+  </g>
+  <g>
+    <line class="cls-3" x1="557.21" y1="55.14" x2="557.21" y2="93.37"/>
+    <path class="cls-1" d="M557.21,87.09l12.61-7.67.29.43-8.17,20.56c-1.58,7.16-3.15,14.33-4.73,21.49-1.58-7.16-3.15-14.33-4.73-21.49l-8.17-20.56.22-.43,12.68,7.67Z"/>
+  </g>
+  <text class="cls-2" transform="translate(284.22 167.35)"><tspan x="0" y="0">Ø</tspan></text>
+  <text class="cls-2" transform="translate(544.04 163.61)"><tspan x="0" y="0">Ø</tspan></text>
+  <text class="cls-2" transform="translate(292.28 241.28)"><tspan x="0" y="0">Cell size</tspan></text>
+  <text class="cls-6" transform="translate(412.16 151.77)"><tspan x="0" y="0">?</tspan></text>
+  <text class="cls-6" transform="translate(178.15 148.69)"><tspan x="0" y="0">?</tspan></text>
+  <text class="cls-6" transform="translate(97.03 193.22)"><tspan x="0" y="0">?</tspan></text>
+  <text class="cls-6" transform="translate(499.17 202.25)"><tspan x="0" y="0">?</tspan></text>
+  <g>
+    <line class="cls-4" x1="454.52" y1="202.25" x2="514.3" y2="118.48"/>
+    <path class="cls-5" d="M526.57,101.28c-2.77,10.23-4.81,23.93-3.83,34.02l-10.05-14.57-17.04-4.77c9.87-2.35,22.15-8.73,30.92-14.68Z"/>
+  </g>
+  <g>
+    <line class="cls-4" x1="378.39" y1="193.22" x2="404.16" y2="77.45"/>
+    <path class="cls-5" d="M408.76,56.84c1.44,10.5,4.9,23.91,9.75,32.82l-14.94-9.49-17.55,2.26c8.17-6.01,16.99-16.68,22.75-25.58Z"/>
+  </g>
+  <g>
+    <path class="cls-4" d="M274.62,213.66c-69.24-40.46-81.65-78.28-27.45-113"/>
+    <path class="cls-5" d="M265.58,90.26c-6.79,8.14-14.37,19.73-17.69,29.31l-3.05-17.44-13.5-11.45c9.95,1.98,23.77,1.32,34.23-.43Z"/>
+  </g>
+  <g>
+    <path class="cls-4" d="M274.62,231.17c-127.33-42.97-184.41-95.64-130.91-163.57"/>
+    <path class="cls-5" d="M157.81,51.87c-3.8,9.9-7.24,23.31-7.29,33.45l-8.51-15.52-16.47-6.48c10.05-1.33,22.93-6.42,32.26-11.44Z"/>
+  </g>
+</svg>

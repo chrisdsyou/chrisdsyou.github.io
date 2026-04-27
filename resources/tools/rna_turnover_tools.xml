@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 987.51 509.05">
+  
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 2px;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: none;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-3 {
+        stroke: #231f20;
+      }
+
+      .cls-2 {
+        stroke: #000;
+      }
+
+      .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+        fill: #231f20;
+      }
+
+      .cls-5, .cls-6, .cls-10, .cls-11, .cls-12, .cls-13 {
+        font-family: ArialMT, Arial;
+      }
+
+      .cls-5, .cls-13 {
+        font-size: 27.53px;
+      }
+
+      .cls-14 {
+        fill: #a7a9ac;
+      }
+
+      .cls-14, .cls-15 {
+        opacity: .5;
+      }
+
+      .cls-6, .cls-10, .cls-8, .cls-9, .cls-12 {
+        font-size: 21.5px;
+      }
+
+      .cls-16 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-15 {
+        fill: #bcbec0;
+      }
+
+      .cls-3, .cls-4 {
+        stroke-width: 3px;
+      }
+
+      .cls-10 {
+        fill: #bd202e;
+      }
+
+      .cls-17, .cls-13 {
+        fill: #ed1c24;
+      }
+
+      .cls-18 {
+        letter-spacing: 0em;
+      }
+
+      .cls-18, .cls-9 {
+        font-family: Arial-ItalicMT, Arial;
+        font-style: italic;
+      }
+
+      .cls-4 {
+        stroke: #ed1c24;
+      }
+
+      .cls-19 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-12 {
+        fill: #0073b2;
+      }
+
+      .cls-20 {
+        letter-spacing: -.02em;
+      }
+    </style>
+  </defs>
+  <g>
+    <text class="cls-5" transform="translate(0 185.24)"><tspan x="0" y="0">DN</tspan><tspan class="cls-19" x="39.77" y="0">A</tspan><tspan x="56.61" y="0"> </tspan></text>
+    <text class="cls-5" transform="translate(171.52 184.73)"><tspan x="0" y="0">mRN</tspan><tspan class="cls-19" x="62.7" y="0">A</tspan></text>
+    <text class="cls-5" transform="translate(360.04 184.2)"><tspan x="0" y="0">Protein</tspan></text>
+    <g>
+      <line class="cls-3" x1="86" y1="177.26" x2="132.46" y2="177.26"/>
+      <path class="cls-7" d="M128.69,177.26l-4.6-7.57.26-.17,12.34,4.9c4.3.95,8.6,1.89,12.9,2.84-4.3.95-8.6,1.89-12.9,2.84l-12.34,4.9-.26-.13,4.6-7.61Z"/>
+    </g>
+    <g>
+      <line class="cls-3" x1="274.53" y1="177.26" x2="320.99" y2="177.26"/>
+      <path class="cls-7" d="M317.22,177.26l-4.6-7.57.26-.17,12.34,4.9c4.3.95,8.6,1.89,12.9,2.84-4.3.95-8.6,1.89-12.9,2.84l-12.34,4.9-.26-.13,4.6-7.61Z"/>
+    </g>
+    <g>
+      <line class="cls-3" x1="215.43" y1="200.57" x2="215.43" y2="231.89"/>
+      <path class="cls-7" d="M215.43,228.12l7.57-4.6.17.26-4.9,12.34c-.95,4.3-1.89,8.6-2.84,12.9-.95-4.3-1.89-8.6-2.84-12.9l-4.9-12.34.13-.26,7.61,4.6Z"/>
+    </g>
+    <g>
+      <line class="cls-3" x1="404.27" y1="200.57" x2="404.27" y2="231.89"/>
+      <path class="cls-7" d="M404.27,228.12l7.57-4.6.17.26-4.9,12.34c-.95,4.3-1.89,8.6-2.84,12.9-.95-4.3-1.89-8.6-2.84-12.9l-4.9-12.34.13-.26,7.61,4.6Z"/>
+    </g>
+    <text class="cls-5" transform="translate(206.21 281.98)"><tspan x="0" y="0">Ø</tspan></text>
+    <text class="cls-5" transform="translate(394.71 279.27)"><tspan x="0" y="0">Ø</tspan></text>
+    <text class="cls-5" transform="translate(212.05 335.63)"><tspan x="0" y="0">Cell size</tspan></text>
+    <text class="cls-13" transform="translate(129.25 268.45)"><tspan x="0" y="0">?</tspan></text>
+    <g>
+      <path class="cls-4" d="M199.25,315.58c-51.18-29.9-59.56-57.82-17.66-83.4"/>
+      <path class="cls-17" d="M192.68,226.06c-4.12,4.84-8.74,11.75-10.78,17.48l-1.73-10.48-8.03-6.95c5.96,1.25,14.26.93,20.54-.05Z"/>
+    </g>
+  </g>
+  <g>
+    <rect class="cls-14" x="556.9" y="37.62" width="400.2" height="155.01" rx="10" ry="10"/>
+    <text class="cls-9" transform="translate(690.17 125.07)"><tspan x="0" y="0">P</tspan></text>
+    <text class="cls-9" transform="translate(704.51 132.23) scale(.58)"><tspan x="0" y="0">TRE</tspan></text>
+    <text class="cls-8" transform="translate(729.58 125.07)"><tspan class="cls-11" x="0" y="0"> </tspan><tspan class="cls-18" x="5.97" y="0">CCND1</tspan></text>
+    <line class="cls-2" x1="671.8" y1="52.62" x2="671.8" y2="179.31"/>
+    <text class="cls-6" transform="translate(643.48 128.65)"><tspan x="0" y="0">+</tspan></text>
+    <text class="cls-9" transform="translate(690.17 163.4)"><tspan x="0" y="0">P</tspan></text>
+    <text class="cls-9" transform="translate(704.51 170.56) scale(.58)"><tspan x="0" y="0">TRE</tspan></text>
+    <text class="cls-8" transform="translate(729.58 163.4)"><tspan class="cls-11" x="0" y="0"> </tspan><tspan class="cls-18" x="5.97" y="0">shCCND1</tspan></text>
+    <text class="cls-6" transform="translate(643.48 166.98)"><tspan x="0" y="0">+</tspan></text>
+    <g>
+      <text class="cls-6" transform="translate(569.33 156.74)"><tspan x="0" y="0" xml:space="preserve">  DOX</tspan></text>
+      <text class="cls-6" transform="translate(566.93 129.14)"><tspan x="0" y="0">4 days</tspan></text>
+    </g>
+    <text class="cls-6" transform="translate(870.46 80.38)"><tspan x="0" y="0">Size</tspan></text>
+    <text class="cls-6" transform="translate(868.4 125.97)"><tspan x="0" y="0">Small</tspan></text>
+    <text class="cls-6" transform="translate(867.79 164.49)"><tspan x="0" y="0">Large</tspan></text>
+    <line class="cls-2" x1="632.43" y1="95.5" x2="947.07" y2="93.1"/>
+    <text class="cls-6" transform="translate(690.17 80.38)"><tspan x="0" y="0">Genotype</tspan></text>
+    <rect class="cls-15" x="622.45" y="248.58" width="269.1" height="78.45" rx="10" ry="10"/>
+    <text class="cls-6" transform="translate(699.04 276.79)"><tspan x="0" y="0">Nucleic acid</tspan></text>
+    <text class="cls-10" transform="translate(641.58 309.23)"><tspan x="0" y="0">Uridine</tspan></text>
+    <text class="cls-12" transform="translate(766.04 309.23)"><tspan x="0" y="0">Thiouridine</tspan></text>
+    <g>
+      <line class="cls-1" x1="720.87" y1="303.49" x2="742.8" y2="303.49"/>
+      <path class="cls-7" d="M754.87,303.49c-5.68,2.11-12.73,5.7-17.09,9.51l3.44-9.51-3.44-9.51c4.37,3.81,11.42,7.4,17.09,9.51Z"/>
+    </g>
+    <rect class="cls-14" x="526.5" y="368.82" width="461.01" height="77.94" rx="10" ry="10"/>
+    <text class="cls-6" transform="translate(539.79 18.45)"><tspan x="0" y="0">Induce di</tspan><tspan class="cls-20" x="87.27" y="0">f</tspan><tspan x="92.86" y="0">ferent sizes</tspan></text>
+    <text class="cls-6" transform="translate(539.79 351.75)"><tspan x="0" y="0">Chase</tspan></text>
+    <g>
+      <rect class="cls-14" x="676.01" y="464.17" width="161.98" height="44.88" rx="10" ry="10"/>
+      <text class="cls-6" transform="translate(710.39 492.35)"><tspan x="0" y="0">SLAMseq</tspan></text>
+    </g>
+    <text class="cls-6" transform="translate(717.38 433.19)"><tspan class="cls-16" x="0" y="0">T</tspan><tspan x="12.34" y="0">ime (h)</tspan></text>
+    <g>
+      <line class="cls-1" x1="757" y1="441.51" x2="757" y2="456.32"/>
+      <path class="cls-7" d="M757,468.39c-2.11-5.68-5.7-12.73-9.51-17.09l9.51,3.44,9.51-3.44c-3.81,4.37-7.4,11.42-9.51,17.09Z"/>
+    </g>
+    <text class="cls-6" transform="translate(539.79 231.01)"><tspan x="0" y="0">24h pulse s⁴U</tspan></text>
+    <g>
+      <text class="cls-6" transform="translate(550.05 404.7)"><tspan x="0" y="0">0</tspan></text>
+      <text class="cls-6" transform="translate(591.33 404.7)"><tspan x="0" y="0">0.2</tspan></text>
+      <text class="cls-6" transform="translate(641.57 404.7)"><tspan x="0" y="0">0.3</tspan></text>
+      <text class="cls-6" transform="translate(691.81 404.7)"><tspan x="0" y="0">0.8</tspan></text>
+      <text class="cls-6" transform="translate(742.06 404.7)"><tspan x="0" y="0">1.5</tspan></text>
+      <text class="cls-6" transform="translate(801.26 404.7)"><tspan x="0" y="0">3</tspan></text>
+      <text class="cls-6" transform="translate(851.51 404.7)"><tspan x="0" y="0">6</tspan></text>
+      <text class="cls-6" transform="translate(895.77 404.7)"><tspan x="0" y="0">12</tspan></text>
+      <text class="cls-6" transform="translate(946.01 404.7)"><tspan x="0" y="0">24</tspan></text>
+    </g>
+    <g>
+      <line class="cls-1" x1="757" y1="187.63" x2="757" y2="239.97"/>
+      <path class="cls-7" d="M757,252.04c-2.11-5.68-5.7-12.73-9.51-17.09l9.51,3.44,9.51-3.44c-3.81,4.37-7.4,11.42-9.51,17.09Z"/>
+    </g>
+    <g>
+      <line class="cls-1" x1="757" y1="323.42" x2="757" y2="361.32"/>
+      <path class="cls-7" d="M757,373.39c-2.11-5.68-5.7-12.73-9.51-17.09l9.51,3.44,9.51-3.44c-3.81,4.37-7.4,11.42-9.51,17.09Z"/>
+    </g>
+  </g>
+</svg>

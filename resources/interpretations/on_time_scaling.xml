@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 545.51 451.69">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #231f20;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        font-size: 24.68px;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        fill: #231f20;
+      }
+
+      .cls-2, .cls-4, .cls-7, .cls-5, .cls-6, .cls-8 {
+        font-family: Arial-BoldMT, Arial;
+        font-weight: 700;
+      }
+
+      .cls-9 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-10 {
+        fill: #09b9ed;
+      }
+
+      .cls-4 {
+        font-size: 35.3px;
+      }
+
+      .cls-11 {
+        fill: #ed1c24;
+      }
+
+      .cls-7 {
+        fill: #00a14a;
+      }
+
+      .cls-7, .cls-6, .cls-8 {
+        font-size: 24.92px;
+      }
+
+      .cls-5 {
+        font-size: 31.15px;
+      }
+
+      .cls-12 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-13 {
+        fill: #00a14b;
+      }
+
+      .cls-8 {
+        fill: #ec2027;
+      }
+
+      .cls-14 {
+        fill: #01b9ec;
+      }
+    </style>
+  </defs>
+  <text class="cls-4" transform="translate(0 30.29)"><tspan x="0" y="0">Scaling ON time</tspan></text>
+  <g>
+    <text class="cls-5" transform="translate(26.72 323.25) rotate(-90)"><tspan x="0" y="0">Cell size</tspan></text>
+    <g>
+      <text class="cls-5" transform="translate(68.56 366.82)"><tspan x="0" y="0">Large</tspan></text>
+      <text class="cls-5" transform="translate(67.73 169.11)"><tspan x="0" y="0">Small</tspan></text>
+    </g>
+    <g>
+      <g>
+        <text class="cls-7" transform="translate(187.8 297.36)"><tspan x="0" y="0">ON</tspan></text>
+        <text class="cls-8" transform="translate(187.8 394.47)"><tspan x="0" y="0">OFF</tspan></text>
+      </g>
+      <text class="cls-2" transform="translate(488.34 442.4)"><tspan class="cls-12" x="0" y="0">T</tspan><tspan x="14.63" y="0">ime</tspan></text>
+      <polyline class="cls-1" points="249.98 266.94 249.98 411.94 545.51 411.94"/>
+      <g>
+        <g>
+          <path class="cls-3" d="M534.69,385.82h-27.5s-.45,0-.45,0v-97.57h-3.11s-51.3,0-51.9,0l-.02,3.11h-3.11v94.46h-76.38s-.45,0-.45,0v-97.57h-3.11s-51.3,0-51.9,0l-.02,3.11h-3.11v94.46h-61.13c0,2.08,0,4.15,0,6.23h67.37v-97.57h45.68v94.46h3.12v3.11c.71,0,83.06,0,83.06,0h3.11v-97.57h45.68v94.46h3.12v3.11c.3,0,14.5,0,31.07,0,0-2.08,0-4.15,0-6.23Z"/>
+          <rect class="cls-11" x="365.6" y="385.82" width="89.1" height="6.23"/>
+          <rect class="cls-13" x="313.54" y="288.25" width="58.18" height="6.23"/>
+          <rect class="cls-13" x="448.62" y="288.25" width="58.09" height="6.23"/>
+          <path class="cls-11" d="M252.06,385.82c-.03,2.37-.07,4.53-.09,6.23h67.86v-6.23h-67.76Z"/>
+          <path class="cls-11" d="M535.32,385.82h-34.74v6.23h34.8c-.02-.33-.05-2.8-.06-6.23Z"/>
+        </g>
+        <rect class="cls-10" x="451.68" y="294.48" width="52" height="97.57"/>
+        <rect class="cls-14" x="316.74" y="294.48" width="51.76" height="97.57"/>
+      </g>
+    </g>
+    <g>
+      <g>
+        <text class="cls-7" transform="translate(187.8 100.28)"><tspan x="0" y="0">ON</tspan></text>
+        <text class="cls-8" transform="translate(187.8 198.14)"><tspan x="0" y="0">OFF</tspan></text>
+      </g>
+      <text class="cls-6" transform="translate(484.88 243.69)"><tspan class="cls-9" x="0" y="0">T</tspan><tspan x="14.77" y="0">ime</tspan></text>
+      <polyline class="cls-1" points="248.52 70.16 248.52 215.16 542.59 215.16"/>
+      <g>
+        <path class="cls-3" d="M515.11,188.99h-61.65s-.45,0-.45,0v-97.84h-3.11s-25.47,0-25.94,0l-.02,3.11h-3.11v94.73h-76.38s-.45,0-.45,0v-97.84h-3.11s-25.47,0-25.94,0l-.02,3.11h-3.11v94.73h-59.18c-.02,1.94-.04,4.02-.06,6.23h65.47v-97.84c.3,0,.61,0,.94,0h18.79v94.73h3.12v3.11c.71,0,83.06,0,83.06,0h3.11v-97.84c.3,0,.61,0,.94,0h18.79v94.73h3.12v3.11c.5,0,41.01,0,65.26,0-.01-2.08-.03-4.15-.04-6.23Z"/>
+        <rect class="cls-13" x="311.82" y="91.14" width="32.15" height="6.23"/>
+        <rect class="cls-11" x="337.78" y="189.01" width="89.32" height="6.23"/>
+        <rect class="cls-13" x="420.84" y="91.14" width="32.16" height="6.23"/>
+        <path class="cls-11" d="M533.43,188.99h-86.67v6.23h86.72c-.02-2.08-.04-4.15-.05-6.23Z"/>
+        <rect class="cls-11" x="250.59" y="188.93" width="67.46" height="6.36"/>
+        <rect class="cls-10" x="314.91" y="97.38" width="25.93" height="97.92"/>
+        <rect class="cls-10" x="423.98" y="97.38" width="25.87" height="97.88"/>
+      </g>
+    </g>
+  </g>
+</svg>

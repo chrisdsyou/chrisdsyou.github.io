@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 411.13 235.21">
+  
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #231f20;
+        stroke-width: 2px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3, .cls-4 {
+        font-family: ArialMT, Arial;
+      }
+
+      .cls-5, .cls-4, .cls-6, .cls-7 {
+        fill: #231f20;
+      }
+
+      .cls-8 {
+        letter-spacing: 0em;
+      }
+
+      .cls-8, .cls-6, .cls-9 {
+        font-family: Arial-ItalicMT, Arial;
+        font-style: italic;
+      }
+
+      .cls-2 {
+        fill: #ffe2b5;
+        stroke: #a69579;
+      }
+
+      .cls-4, .cls-6, .cls-7 {
+        font-size: 21.19px;
+      }
+
+      .cls-10 {
+        fill: #f15922;
+      }
+    </style>
+  </defs>
+  <text/>
+  <g>
+    <path class="cls-2" d="M275.36,36.49c0,6.14,14.05,17.72,11.19,22.67-2.96,5.11-23.49-7.17-28.6-4.21s-4.51,3.49-10.65,3.49-5.53-.9-10.48-3.77c-5.11-2.96-27.28,10.45-30.24,5.34-2.87-4.95-6.4-17.39-6.4-23.53s10.43-14.58,13.3-19.53c2.96-5.11,8.4-12.68,13.51-15.64,4.95-2.87,14.18,2.71,20.31,2.71s8.94,5.52,13.9,8.39c5.11,2.96,9.02,4.03,11.98,9.15,2.87,4.95,2.19,8.8,2.19,14.93Z"/>
+    <circle class="cls-10" cx="238.85" cy="31.44" r="11.24"/>
+  </g>
+  <g>
+    <path class="cls-2" d="M215.2,207.81c0,2.9,6.64,8.37,5.28,10.71-1.4,2.41-11.09-3.38-13.51-1.99-2.34,1.35-2.13,1.65-5.03,1.65s-2.61-.42-4.95-1.78-12.89,4.94-14.28,2.52c-1.35-2.34-3.02-8.21-3.02-11.11s4.93-6.89,6.28-9.23,3.97-5.99,6.38-7.39,6.7,1.28,9.59,1.28,4.22,2.61,6.56,3.96c2.41,1.4,4.26,1.91,5.66,4.32s1.03,4.16,1.03,7.05Z"/>
+    <circle class="cls-10" cx="197.96" cy="205.43" r="5.31"/>
+  </g>
+  <g>
+    <path class="cls-2" d="M136.18,121.9c0,4.11,9.42,11.87,7.5,15.19-1.98,3.43-15.74-4.8-19.16-2.82-3.32,1.92-3.02,2.34-7.13,2.34s-3.7-.6-7.02-2.52c-3.43-1.98-18.28,7.01-20.26,3.58s-4.29-11.65-4.29-15.76,6.99-9.77,8.91-13.09c1.98-3.43,5.63-8.5,9.05-10.48,3.32-1.92,9.5,1.81,13.61,1.81s5.99,3.7,9.31,5.62c3.43,1.98,6.04,2.7,8.03,6.13,1.92,3.32,1.47,5.89,1.47,10.01Z"/>
+    <circle class="cls-10" cx="111.71" cy="118.51" r="7.53"/>
+  </g>
+  <g>
+    <path class="cls-1" d="M135.66,88.23h0c4.05-16.87,17.89-29.42,34.73-32.05"/>
+    <path class="cls-5" d="M178.82,55.53c-3.83,1.82-8.52,4.76-11.33,7.69l1.81-6.84-2.98-6.42c3.28,2.39,8.42,4.46,12.51,5.58Z"/>
+  </g>
+  <g>
+    <path class="cls-1" d="M119.13,160.64h0c4.05,16.87,17.89,29.42,34.73,32.05"/>
+    <path class="cls-5" d="M162.29,193.34c-4.09,1.12-9.23,3.19-12.51,5.58l2.98-6.42-1.81-6.84c2.81,2.92,7.5,5.87,11.33,7.68Z"/>
+  </g>
+  <text class="cls-6" transform="translate(0 50.23)"><tspan x="0" y="0">P</tspan></text>
+  <text class="cls-6" transform="translate(14.13 57.29) scale(.58)"><tspan x="0" y="0">TRE</tspan></text>
+  <text class="cls-7" transform="translate(38.84 50.23)"><tspan class="cls-3" x="0" y="0"> </tspan><tspan class="cls-9" x="5.89" y="0">shCCND1</tspan></text>
+  <text class="cls-6" transform="translate(0 202.85)"><tspan x="0" y="0">P</tspan></text>
+  <text class="cls-6" transform="translate(14.13 209.9) scale(.58)"><tspan x="0" y="0">TRE</tspan></text>
+  <text class="cls-7" transform="translate(38.84 202.85)"><tspan class="cls-3" x="0" y="0"> </tspan><tspan class="cls-8" x="5.89" y="0">CCND1</tspan></text>
+  <text class="cls-4" transform="translate(305.15 164.54)"><tspan x="0" y="0">Proteomics</tspan></text>
+  <g>
+    <line class="cls-1" x1="295.29" y1="64.04" x2="329.42" y2="126.87"/>
+    <path class="cls-5" d="M333.46,134.29c-3.19-2.79-7.76-5.92-11.56-7.34l7-1.06,4.7-5.29c-.88,3.96-.74,9.5-.14,13.69Z"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="238.92" y1="206.64" x2="299.84" y2="183.33"/>
+    <path class="cls-5" d="M307.73,180.31c-3.19,2.8-6.89,6.91-8.8,10.49l-.13-7.08-4.63-5.36c3.81,1.4,9.32,1.99,13.56,1.94Z"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="156.45" y1="127.92" x2="283.21" y2="149.49"/>
+    <path class="cls-5" d="M291.54,150.91c-4.17.79-9.45,2.44-12.91,4.56l3.49-6.16-1.26-6.97c2.57,3.14,7.01,6.45,10.68,8.57Z"/>
+  </g>
+  <text class="cls-4" transform="translate(65.41 75.75)"><tspan x="0" y="0">+DOX</tspan></text>
+  <text class="cls-4" transform="translate(56.23 228.33)"><tspan x="0" y="0">+DOX</tspan></text>
+  <text class="cls-4" transform="translate(187.91 119.29)"><tspan x="0" y="0">+DMSO</tspan></text>
+</svg>

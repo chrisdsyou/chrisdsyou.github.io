@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research – Chris You</title>
+  <link rel="icon" type="image/svg+xml" href="resources/shared/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@300;400&family=Dancing+Script:wght@500&family=Noto+Sans+KR:wght@300;400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="shared.css" />
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      overflow: hidden;
+    }
+
+    body {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 300;
+      color: #2d2d2d;
+      background: #252b34;
+    }
+
+    /* ── Research panel (full page) ── */
+    .research-panel {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .research-hero {
+      position: relative;
+      flex: 0 0 38%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      padding: 7.5rem 3.5rem 3rem;
+    }
+
+    .research-hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    .research-hero-overlay:hover~.research-hero-content .research-hero-title {
+      opacity: 0.85;
+    }
+
+    .research-hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      pointer-events: none;
+    }
+
+    .research-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4em;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.4);
+      padding: 0;
+      transition: color 0.2s;
+      position: relative;
+      z-index: 2;
+      text-decoration: none;
+    }
+
+    .research-back:hover {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .research-label {
+      display: block;
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.3);
+      position: relative;
+      z-index: 2;
+      margin-top: 1.4rem;
+    }
+
+    .research-hero-content {
+      margin-top: 1.5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .research-hero-question {
+      position: absolute;
+      bottom: 3rem;
+      right: 3.5rem;
+      z-index: 3;
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.45);
+      text-decoration: none;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+
+    .research-hero-question:hover {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .research-hero-title {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(2rem, 3.2vw, 3.4rem);
+      font-weight: 300;
+      line-height: 1.1;
+      color: #ffffff;
+      letter-spacing: -0.01em;
+      margin-bottom: 2rem;
+      max-width: 100%;
+    }
+
+    .research-boxes {
+      flex: 1;
+      display: flex;
+      min-height: 0;
+    }
+
+    .research-box {
+      flex: 1;
+      position: relative;
+      padding: 1rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      text-decoration: none;
+    }
+
+    .research-box+.research-box {
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .research-box-1 {
+      background: #c4b3ab;
+    }
+
+    .research-box-2 {
+      background: #a8b8c4;
+    }
+
+    .research-box-3 {
+      background: #a8b8a4;
+    }
+
+    .research-box-title {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(1.6rem, 2.4vw, 2.6rem);
+      font-weight: 300;
+      line-height: 1.2;
+      color: #1e2228;
+      margin-bottom: 1.25rem;
+    }
+
+    .research-box-rule {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .research-box-rule::before {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(0, 0, 0, 0.22);
+    }
+
+    .research-box-fig {
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      color: rgba(0, 0, 0, 0.4);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .research-box-img {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+      min-height: 0;
+    }
+
+    .research-box-img img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      opacity: 0.85;
+    }
+
+    .research-box-link {
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.55);
+      text-decoration: none;
+      transition: color 0.2s;
+      flex-shrink: 0;
+    }
+
+    .research-box-link:hover {
+      color: rgba(0, 0, 0, 0.9);
+    }
+
+    @media (max-width: 768px) {
+      html, body { overflow: auto; }
+      .research-panel { height: auto; overflow: visible; }
+      .research-hero {
+        flex: none;
+        height: auto;
+        min-height: 260px;
+        padding: 5.5rem 1.5rem 2rem;
+      }
+      .research-hero-title { font-size: clamp(1.8rem, 6vw, 2.6rem); }
+      .research-hero-question {
+        position: static;
+        display: block;
+        margin-top: 1.25rem;
+        white-space: normal;
+      }
+      .research-boxes { flex-direction: column; }
+      .research-box { flex: none; min-height: 200px; }
+      .research-box + .research-box {
+        border-left: none;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+      }
+      .research-box-title { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a href="index.html" class="logo">chris you</a>
+
+  <!-- Cell icon nav badge -->
+  <div class="cell-nav-wrap" id="menuBtn" role="button" aria-label="Open navigation menu" tabindex="0">
+      <svg class="cell-nav-svg" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 276.8 257.7">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #231f20;
+        stroke-miterlimit: 10;
+        stroke-width: 8px;
+      }
+
+      .cls-3 {
+        fill: #231f20;
+      }
+
+      .cls-4, .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-4" d="M21.12,239.37c-19-18.36-25.62-61.92-1.85-82.42,21.24-18.69,53.99,1.77,71.87,20.93,21.42,16.64,43.69,45.97,24.1,63.49-22.13,19.33-71.59,13.84-94.13-2Z"/>
+    <path class="cls-1" d="M21.12,239.37c-19-18.36-25.62-61.92-1.85-82.42,21.24-18.69,53.99,1.77,71.87,20.93,21.42,16.64,43.69,45.97,24.1,63.49-22.13,19.33-71.59,13.84-94.13-2Z"/>
+  </g>
+  <g>
+    <g>
+      <path class="cls-4" d="M106.63,40.51c3.02,17.4-6.1,32.4-12.3,44.84-6.15,11.59-12.09,26.14-24.43,25.37-12.31-1.22-23.86-14.13-34.12-22.77-10.3-7.78-23.79-15.14-27.26-24.74-3.5-9.14,5.26-17.98,11.24-26.73,6.03-9.61,11.9-22.88,24.67-29.46C57.22,0,69.14,6.75,79.61,11.69c10.42,5.8,23.98,11.88,27.02,28.82Z"/>
+      <path class="cls-1" d="M106.63,40.51c3.02,17.4-6.1,32.4-12.3,44.84-6.15,11.59-12.09,26.14-24.43,25.37-12.31-1.22-23.86-14.13-34.12-22.77-10.3-7.78-23.79-15.14-27.26-24.74-3.5-9.14,5.26-17.98,11.24-26.73,6.03-9.61,11.9-22.88,24.67-29.46C57.22,0,69.14,6.75,79.61,11.69c10.42,5.8,23.98,11.88,27.02,28.82Z"/>
+    </g>
+    <circle class="cls-2" cx="66.51" cy="50.61" r="11.49"/>
+    <circle class="cls-3" cx="45.66" cy="34.7" r="5.48"/>
+    <circle class="cls-3" cx="37.62" cy="59.49" r="5.48"/>
+  </g>
+  <g>
+    <path class="cls-4" d="M270.83,190.51c-6.89,15.4-28.95,7.23-40.28,12.65-11.66,4.91-20.09,24.8-33.71,19.75-13.2-4.91-23.04-27.42-35.66-37.46-12.66-9.29-34.27-12.61-41.52-22.69-7.52-9.71,4.43-21.71,3.71-32.2-.7-10.17-14.93-22.08-8.32-32.16,6.65-10.82,29.31-14.05,40.81-22.74,11.91-9.66,20.49-32.37,34.64-37.5,13.72-4.98,23.71,14.52,36.6,19.57,12.85,5.79,35.03-1.93,42.05,12.42,7.21,15.49-5.47,41.58-5.18,60.2.29,18.05,13.78,44.02,6.85,60.16Z"/>
+    <path class="cls-1" d="M270.83,190.51c-6.89,15.4-28.95,7.23-40.28,12.65-11.66,4.91-20.09,24.8-33.71,19.75-13.2-4.91-23.04-27.42-35.66-37.46-12.66-9.29-34.27-12.61-41.52-22.69-7.52-9.71,4.43-21.71,3.71-32.2-.7-10.17-14.93-22.08-8.32-32.16,6.65-10.82,29.31-14.05,40.81-22.74,11.91-9.66,20.49-32.37,34.64-37.5,13.72-4.98,23.71,14.52,36.6,19.57,12.85,5.79,35.03-1.93,42.05,12.42,7.21,15.49-5.47,41.58-5.18,60.2.29,18.05,13.78,44.02,6.85,60.16Z"/>
+  </g>
+  <circle class="cls-2" cx="222.42" cy="141.79" r="23.07"/>
+  <circle class="cls-3" cx="174.28" cy="151.44" r="4.81"/>
+  <circle class="cls-3" cx="189.08" cy="96.85" r="4.81"/>
+  <circle class="cls-3" cx="181.57" cy="132.46" r="4.81"/>
+  <circle class="cls-3" cx="231.39" cy="104.05" r="4.81"/>
+  <circle class="cls-2" cx="51.14" cy="218.21" r="14.6"/>
+  <circle class="cls-3" cx="45.66" cy="179.31" r="4.81"/>
+  <circle class="cls-3" cx="80.98" cy="203.61" r="4.81"/>
+</svg>
+    </div>
+
+  <!-- Research page content -->
+  <div class="research-panel">
+    <div class="research-hero">
+      <div class="research-hero-overlay"></div>
+      <img class="research-hero-bg" src="resources/research/cell_img_cropped.jpg" alt="" />
+
+      <a class="research-back" href="index.html">&#x2190;&nbsp;&nbsp;back</a>
+      <span class="research-label">research</span>
+
+      <div class="research-hero-content">
+        <a href="question.html" style="text-decoration:none;">
+          <h2 class="research-hero-title">How does a cell remodel its proteome with cell size?</h2>
+        </a>
+      </div>
+      <a class="research-hero-question" href="question.html">Question &nbsp;&#x2192;</a>
+    </div>
+
+    <div class="research-boxes">
+      <a class="research-box research-box-1" href="tools.html">
+        <object type="image/svg+xml" data="resources/research/central_dogma.xml"
+          style="position:absolute; top:-10%; left:0; right:0; bottom:0; width:100%; height:108%; pointer-events:none;"></object>
+        <h3 class="research-box-title" style="position:relative; z-index:1;">Probing the Central Dogma</h3>
+        <div style="flex:1;"></div>
+        <span class="research-box-link" style="position:relative; z-index:1;">Tools &nbsp;&#x2192;</span>
+      </a>
+
+      <a class="research-box research-box-2" href="results.html">
+        <object type="image/svg+xml" data="resources/results/transcription_diagram.xml"
+          style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:72%; height:72%; pointer-events:none;"></object>
+        <h3 class="research-box-title" style="position:relative; z-index:1;">Transcription is the key</h3>
+        <div style="flex:1;"></div>
+        <span class="research-box-link" style="position:relative; z-index:1;">Results &nbsp;&#x2192;</span>
+      </a>
+
+      <a class="research-box research-box-3" href="interpretations.html">
+        <object type="image/svg+xml" data="resources/interpretations/burst_size_scaling_diagram.xml"
+          style="position:absolute; top:55%; left:50%; transform:translate(-50%,-50%); width:58%; height:58%; pointer-events:none;"></object>
+        <h3 class="research-box-title" style="position:relative; z-index:1;">Size scaling of </br>transcriptional
+          bursting</h3>
+        <div style="flex:1;"></div>
+        <span class="research-box-link" style="position:relative; z-index:1;">Interpretations &nbsp;&#x2192;</span>
+      </a>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <span>&copy; 2026 Dong Shin (Chris) You. All rights reserved.</span>
+  </footer>
+
+  <!-- Drawer overlay -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <!-- Navigation drawer -->
+  <div class="drawer" id="drawer">
+    <button class="close-btn" id="closeBtn" aria-label="Close menu">&#x2715;</button>
+    <div class="drawer-subtitle"><span id="drawerName">Chris You</span></div>
+    <nav>
+      <ul>
+        <li><a href="index.html#about">about</a></li>
+        <li><a href="cv.html">cv</a></li>
+        <li>
+        <div class="drawer-research-row">
+          <a href="research.html" class="drawer-research-link">research</a>
+          <button class="drawer-research-toggle" id="researchToggle"><span class="drawer-research-arrow">&#x203A;</span></button>
+        </div>
+        <div class="drawer-subnav" id="researchSubnav">
+          <a href="question.html">question</a>
+          <a href="tools.html">tools</a>
+          <a href="results.html">results</a>
+          <a href="interpretations.html">interpretations</a>
+        </div>
+      </li>
+        <li><a href="publications.html">publications</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <script>
+    // ── Drawer toggle ──
+    const drawer = document.getElementById('drawer');
+    const overlay = document.getElementById('drawerOverlay');
+
+    document.getElementById('menuBtn').addEventListener('click', function () {
+      drawer.classList.add('open');
+      overlay.classList.add('open');
+    });
+
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      overlay.classList.remove('open');
+    }
+
+    document.getElementById('closeBtn').addEventListener('click', closeDrawer);
+    overlay.addEventListener('click', closeDrawer);
+
+    // ── Drawer name cycle (roll) ──
+    (function () {
+      const names = ['Chris You', 'Dong Shin You', '유동신'];
+      const container = document.querySelector('.drawer-subtitle');
+      let index = 0;
+      let timer = null;
+      let rolling = false;
+
+      function roll() {
+        if (rolling) return;
+        rolling = true;
+        index = (index + 1) % names.length;
+
+        const outgoing = container.querySelector('span');
+        const incoming = document.createElement('span');
+        incoming.textContent = names[index];
+        incoming.style.transform = 'translateY(100%)';
+        incoming.style.opacity = '0';
+        incoming.style.transition = 'none';
+        container.appendChild(incoming);
+
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            outgoing.style.transition = 'transform 0.45s cubic-bezier(0.4,0,0.2,1), opacity 0.45s';
+            outgoing.style.transform = 'translateY(-100%)';
+            outgoing.style.opacity = '0';
+            incoming.style.transition = 'transform 0.45s cubic-bezier(0.4,0,0.2,1), opacity 0.45s';
+            incoming.style.transform = 'translateY(0)';
+            incoming.style.opacity = '1';
+            setTimeout(function () {
+              outgoing.remove();
+              rolling = false;
+            }, 460);
+          });
+        });
+      }
+
+      function stopCycle() {
+        clearInterval(timer);
+        timer = null;
+        rolling = false;
+        const spans = container.querySelectorAll('span');
+        spans.forEach(function (s, i) { if (i > 0) s.remove(); });
+      }
+
+      function startCycle() {
+        stopCycle();
+        container.innerHTML = '<span>' + names[0] + '</span>';
+        index = 0;
+        timer = setInterval(roll, 2200);
+      }
+
+      document.getElementById('menuBtn').addEventListener('click', startCycle);
+      document.getElementById('closeBtn').addEventListener('click', stopCycle);
+      document.getElementById('drawerOverlay').addEventListener('click', stopCycle);
+    })();
+
+    // ── Cell icon pulse ──
+    (function () {
+      const wrap = document.getElementById('menuBtn');
+      if (!wrap) return;
+      const icon = wrap.querySelector('svg');
+      if (!icon) return;
+
+      const BASE = 0.35;
+      const PEAK = 0.92;
+      const PULSE = 3000;
+      const LAG = 3500;
+
+      let hovered = false;
+      let start = null;
+
+      wrap.addEventListener('mouseenter', () => { hovered = true; });
+      wrap.addEventListener('mouseleave', () => { hovered = false; });
+
+      function tick(now) {
+        if (!start) start = now;
+        const elapsed = now - start;
+        const cycle = PULSE + LAG;
+        const t = elapsed % cycle;
+
+        let opacity;
+        if (hovered) {
+          opacity = PEAK;
+        } else if (t < PULSE) {
+          opacity = BASE + (PEAK - BASE) * Math.sin(Math.PI * t / PULSE);
+        } else {
+          opacity = BASE;
+        }
+
+        icon.style.opacity = opacity.toFixed(3);
+        requestAnimationFrame(tick);
+      }
+
+      requestAnimationFrame(tick);
+    })();
+  </script>
+  <script src="shared.js"></script>
+</body>
+
+</html>
