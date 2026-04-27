@@ -1164,8 +1164,16 @@
       document.getElementById('drawerOverlay').addEventListener('click', stopCycle);
     })();
 
-    // Results diagram hover interactions
+    // On mobile: show all detail items statically, skip hover interactions
+    if (window.innerWidth <= 768) {
+      document.querySelectorAll('#resultsDetailPanel .cd-detail-item').forEach(function (item) {
+        item.style.display = (item.id === 'rdDefault') ? 'none' : 'block';
+      });
+    }
+
+    // Results diagram hover interactions (desktop only)
     (function () {
+      if (window.innerWidth <= 768) return;
       var leaveTimer = null;
       function showResultDetail(key) {
         document.querySelectorAll('#resultsDetailPanel .cd-detail-item').forEach(function (item) {
