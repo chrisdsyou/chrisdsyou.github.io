@@ -486,6 +486,12 @@
         padding: 1.5rem 1.25rem;
       }
       .tools-detail-panel { overflow-y: visible; }
+      /* Show all detail items as static scroll content */
+      .cd-detail-item { display: block !important; border-bottom: 1px solid rgba(0,0,0,0.07); padding-bottom: 1.75rem; margin-bottom: 1.75rem; }
+      .cd-detail-item:last-child { border-bottom: none; margin-bottom: 0; }
+      #rdDefault { display: none !important; }
+      /* Disable interactive animations on mobile */
+      .cd-hover-group { animation: none !important; cursor: default; }
     }
   </style>
 </head>
