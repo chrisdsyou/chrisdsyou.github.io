@@ -150,6 +150,7 @@
     .research-box {
       flex: 1;
       position: relative;
+      isolation: isolate;
       padding: 1rem 1.75rem;
       display: flex;
       flex-direction: column;
@@ -343,7 +344,7 @@
     <div class="research-boxes">
       <a class="research-box research-box-1" href="tools.html">
         <object type="image/svg+xml" data="resources/research/central_dogma.xml"
-          style="position:absolute; top:-10%; left:0; right:0; bottom:0; width:100%; height:108%; pointer-events:none;"></object>
+          style="position:absolute; top:-10%; left:0; right:0; bottom:0; width:100%; height:108%; pointer-events:none; z-index:-1;"></object>
         <h3 class="research-box-title" style="position:relative; z-index:1;">Probing the Central Dogma</h3>
         <div style="flex:1;"></div>
         <span class="research-box-link" style="position:relative; z-index:1;">Tools &nbsp;&#x2192;</span>
@@ -351,7 +352,7 @@
 
       <a class="research-box research-box-2" href="results.html">
         <object type="image/svg+xml" data="resources/results/transcription_diagram.xml"
-          style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:72%; height:72%; pointer-events:none;"></object>
+          style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:72%; height:72%; pointer-events:none; z-index:-1;"></object>
         <h3 class="research-box-title" style="position:relative; z-index:1;">Transcription is the key</h3>
         <div style="flex:1;"></div>
         <span class="research-box-link" style="position:relative; z-index:1;">Results &nbsp;&#x2192;</span>
@@ -359,7 +360,7 @@
 
       <a class="research-box research-box-3" href="interpretations.html">
         <object type="image/svg+xml" data="resources/interpretations/burst_size_scaling_diagram.xml"
-          style="position:absolute; top:55%; left:50%; transform:translate(-50%,-50%); width:58%; height:58%; pointer-events:none;"></object>
+          style="position:absolute; top:55%; left:50%; transform:translate(-50%,-50%); width:58%; height:58%; pointer-events:none; z-index:-1;"></object>
         <h3 class="research-box-title" style="position:relative; z-index:1;">Size scaling of </br>transcriptional
           bursting</h3>
         <div style="flex:1;"></div>
