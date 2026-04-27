@@ -37,7 +37,21 @@
     }
 
     .findings-layout {
-      max-width: 860px;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .finding-fig-single {
+      background: #e8e3dc;
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin: 0 0 3rem;
+    }
+
+    .finding-fig-single object {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
     .findings-figs {
@@ -120,6 +134,7 @@
     @media (max-width: 768px) {
       .sub-panel-inner { padding: 5.5rem 1.25rem 3rem; }
       .findings-figs { flex-direction: column; }
+      .findings-layout { max-width: 100%; }
     }
   </style>
 </head>
@@ -185,6 +200,10 @@
     <span class="pubs-section-label">molecular determinants of transcriptional bursting</span>
 
     <div class="findings-layout">
+      <figure class="finding-fig-single">
+        <object type="image/svg+xml" data="resources/interpretations/transcriptome_remodelling.xml"></object>
+      </figure>
+
       <div class="finding-entry">
         <div class="finding-title">Transcription is the primary driver of proteome remodeling</div>
         <p class="finding-body">By systematically measuring each major step of the gene expression pathway —
@@ -194,9 +213,6 @@
       </div>
 
       <div class="findings-figs">
-        <figure class="finding-fig">
-          <object type="image/svg+xml" data="resources/interpretations/transcriptome_remodelling.xml"></object>
-        </figure>
         <figure class="finding-fig">
           <object type="image/svg+xml" data="resources/interpretations/burst_size_scaling.xml"></object>
         </figure>
