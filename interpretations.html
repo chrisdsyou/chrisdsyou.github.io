@@ -37,22 +37,20 @@
     }
 
     .findings-layout {
-      display: grid;
-      grid-template-columns: 1fr 0.9fr;
-      gap: 2.5rem;
-      align-items: start;
+      max-width: 860px;
     }
 
     .findings-figs {
       display: flex;
-      flex-direction: column;
-      gap: 2rem;
+      gap: 1.5rem;
+      margin: 2rem 0 3rem;
     }
 
     .finding-fig {
+      flex: 1;
       background: #e8e3dc;
       border-radius: 8px;
-      padding: 1.75rem 1.5rem;
+      padding: 1.25rem;
       margin: 0;
     }
 
@@ -121,8 +119,7 @@
     /* ── Mobile ── */
     @media (max-width: 768px) {
       .sub-panel-inner { padding: 5.5rem 1.25rem 3rem; }
-      .findings-layout { grid-template-columns: 1fr; }
-      .findings-figs { order: -1; }
+      .findings-figs { flex-direction: column; }
     }
   </style>
 </head>
@@ -188,59 +185,57 @@
     <span class="pubs-section-label">molecular determinants of transcriptional bursting</span>
 
     <div class="findings-layout">
-      <!-- Left: all interpretations flowing freely -->
-      <div>
-        <div class="finding-entry">
-          <div class="finding-title">Transcription is the primary driver of proteome remodeling</div>
-          <p class="finding-body">By systematically measuring each major step of the gene expression pathway —
-            transcription, translation, mRNA turnover, and protein turnover — across a two-fold size range, we established
-            that differential transcription is the dominant mechanism. Combined models explain 75% of size-dependent
-            protein variation (R² = 0.75), with transcription accounting for nearly all of that explanatory power.</p>
-        </div>
-        <div class="finding-entry">
-          <div class="finding-title">Larger cells prolong transcriptional bursts to scale mRNA output</div>
-          <p class="finding-body">Endogenous live-cell MS2 imaging of the scaling genes RAB7A and RHOA showed that burst
-            size increases with cell size. Decomposing burst size revealed that this is primarily driven by longer ON
-            times — once a promoter is activated in a large cell, it remains active for a longer duration. Burst amplitude
-            (the rate of RNA Pol II loading) and burst initiation rate were comparatively minor contributors. Inactive
-            (OFF) periods were modestly shortened.</p>
-        </div>
-        <div class="finding-entry">
-          <div class="finding-title">Transcription factor dilution as a potential mechanism</div>
-          <p class="finding-body">As cells enlarge, the genome is diluted relative to cell volume, reducing the
-            DNA-to-cytoplasm ratio. We speculate that transcription factor concentrations remain higher relative to a
-            fixed number of genomic binding sites, leading to greater promoter occupancy — analogous to the effect of MYC
-            overexpression, which drives global transcriptional upregulation through increased burst size and ON time via
-            changes in TBP, SPT5, and MED1 dwell times.</p>
-        </div>
-        <div class="finding-entry">
-          <div class="finding-title">Differential scaling is gene-encoded or signal-driven, not expression-level-dependent</div>
-          <p class="finding-body">Unlike findings in budding yeast, we observed no correlation between basal mRNA
-            expression level and size-slope direction in mammalian cells — ruling out the "transcriptomic inversion"
-            model. Instead, differential scaling may be hardwired in the regulatory architecture of individual promoters,
-            or driven by an upstream signaling cascade (resembling mTOR inhibition) that is triggered by genome dilution
-            and reshapes the transcriptional landscape as a cell grows.</p>
-        </div>
-        <div class="finding-entry">
-          <div class="finding-title">Lysosomal super-scaling creates a size-specific therapeutic vulnerability</div>
-          <p class="finding-body">The disproportionate accumulation of lysosomal proteins in large cells reflects a
-            broader pattern of biosynthetic imbalance. In contexts of extreme cell enlargement — such as following CDK4/6
-            inhibition — these lysosomal vulnerabilities may be clinically exploitable. Size-specific vulnerabilities have
-            also been reported through IRF4 upregulation sensitizing myeloma cells to bortezomib, and GPX4-dependent
-            ferroptosis susceptibility in iron-rich, large cells.</p>
-        </div>
+      <div class="finding-entry">
+        <div class="finding-title">Transcription is the primary driver of proteome remodeling</div>
+        <p class="finding-body">By systematically measuring each major step of the gene expression pathway —
+          transcription, translation, mRNA turnover, and protein turnover — across a two-fold size range, we established
+          that differential transcription is the dominant mechanism. Combined models explain 75% of size-dependent
+          protein variation (R² = 0.75), with transcription accounting for nearly all of that explanatory power.</p>
       </div>
-      <!-- Right: diagrams independently stacked -->
+
       <div class="findings-figs">
         <figure class="finding-fig">
           <object type="image/svg+xml" data="resources/interpretations/transcriptome_remodelling.xml"></object>
         </figure>
-        <figure class="finding-fig" style="width: 80%; align-self: center;">
+        <figure class="finding-fig">
           <object type="image/svg+xml" data="resources/interpretations/burst_size_scaling.xml"></object>
         </figure>
-        <figure class="finding-fig" style="width: 80%; align-self: center;">
+        <figure class="finding-fig">
           <object type="image/svg+xml" data="resources/interpretations/on_time_scaling.xml"></object>
         </figure>
+      </div>
+
+      <div class="finding-entry">
+        <div class="finding-title">Larger cells prolong transcriptional bursts to scale mRNA output</div>
+        <p class="finding-body">Endogenous live-cell MS2 imaging of the scaling genes RAB7A and RHOA showed that burst
+          size increases with cell size. Decomposing burst size revealed that this is primarily driven by longer ON
+          times — once a promoter is activated in a large cell, it remains active for a longer duration. Burst amplitude
+          (the rate of RNA Pol II loading) and burst initiation rate were comparatively minor contributors. Inactive
+          (OFF) periods were modestly shortened.</p>
+      </div>
+      <div class="finding-entry">
+        <div class="finding-title">Transcription factor dilution as a potential mechanism</div>
+        <p class="finding-body">As cells enlarge, the genome is diluted relative to cell volume, reducing the
+          DNA-to-cytoplasm ratio. We speculate that transcription factor concentrations remain higher relative to a
+          fixed number of genomic binding sites, leading to greater promoter occupancy — analogous to the effect of MYC
+          overexpression, which drives global transcriptional upregulation through increased burst size and ON time via
+          changes in TBP, SPT5, and MED1 dwell times.</p>
+      </div>
+      <div class="finding-entry">
+        <div class="finding-title">Differential scaling is gene-encoded or signal-driven, not expression-level-dependent</div>
+        <p class="finding-body">Unlike findings in budding yeast, we observed no correlation between basal mRNA
+          expression level and size-slope direction in mammalian cells — ruling out the "transcriptomic inversion"
+          model. Instead, differential scaling may be hardwired in the regulatory architecture of individual promoters,
+          or driven by an upstream signaling cascade (resembling mTOR inhibition) that is triggered by genome dilution
+          and reshapes the transcriptional landscape as a cell grows.</p>
+      </div>
+      <div class="finding-entry">
+        <div class="finding-title">Lysosomal super-scaling creates a size-specific therapeutic vulnerability</div>
+        <p class="finding-body">The disproportionate accumulation of lysosomal proteins in large cells reflects a
+          broader pattern of biosynthetic imbalance. In contexts of extreme cell enlargement — such as following CDK4/6
+          inhibition — these lysosomal vulnerabilities may be clinically exploitable. Size-specific vulnerabilities have
+          also been reported through IRF4 upregulation sensitizing myeloma cells to bortezomib, and GPX4-dependent
+          ferroptosis susceptibility in iron-rich, large cells.</p>
       </div>
     </div>
   </div>
