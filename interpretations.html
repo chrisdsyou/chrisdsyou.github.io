@@ -38,9 +38,19 @@
 
     .findings-layout {
       display: grid;
-      grid-template-columns: 1fr 0.9fr;
+      grid-template-columns: 1fr 1.2fr;
       gap: 2.5rem;
       align-items: start;
+    }
+
+    .findings-inline-figs {
+      display: flex;
+      gap: 1.5rem;
+      margin: 1.5rem 0 2.5rem;
+    }
+
+    .findings-inline-figs .finding-fig {
+      flex: 1;
     }
 
     .findings-figs {
@@ -123,6 +133,7 @@
       .sub-panel-inner { padding: 5.5rem 1.25rem 3rem; }
       .findings-layout { grid-template-columns: 1fr; }
       .findings-figs { order: -1; }
+      .findings-inline-figs { flex-direction: column; }
     }
   </style>
 </head>
@@ -197,6 +208,14 @@
             that differential transcription is the dominant mechanism. Combined models explain 75% of size-dependent
             protein variation (R² = 0.75), with transcription accounting for nearly all of that explanatory power.</p>
         </div>
+        <div class="findings-inline-figs">
+          <figure class="finding-fig">
+            <object type="image/svg+xml" data="resources/interpretations/burst_size_scaling.xml"></object>
+          </figure>
+          <figure class="finding-fig">
+            <object type="image/svg+xml" data="resources/interpretations/on_time_scaling.xml"></object>
+          </figure>
+        </div>
         <div class="finding-entry">
           <div class="finding-title">Larger cells prolong transcriptional bursts to scale mRNA output</div>
           <p class="finding-body">Endogenous live-cell MS2 imaging of the scaling genes RAB7A and RHOA showed that burst
@@ -230,16 +249,10 @@
             ferroptosis susceptibility in iron-rich, large cells.</p>
         </div>
       </div>
-      <!-- Right: diagrams independently stacked -->
+      <!-- Right: first diagram -->
       <div class="findings-figs">
         <figure class="finding-fig">
           <object type="image/svg+xml" data="resources/interpretations/transcriptome_remodelling.xml"></object>
-        </figure>
-        <figure class="finding-fig">
-          <object type="image/svg+xml" data="resources/interpretations/burst_size_scaling.xml"></object>
-        </figure>
-        <figure class="finding-fig" style="width: 80%; align-self: center;">
-          <object type="image/svg+xml" data="resources/interpretations/on_time_scaling.xml"></object>
         </figure>
       </div>
     </div>
