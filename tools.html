@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tools – Chris You</title>
-  <meta name="description" content="Tools and techniques used in Chris You's research — RNA-seq, SLAMseq, SILAC-TMT mass spectrometry, and live-cell MS2 imaging." />
+  <meta name="description"
+    content="Tools and techniques used in Chris You's research — RNA-seq, SLAMseq, SILAC-TMT mass spectrometry, and live-cell MS2 imaging." />
   <meta property="og:title" content="Tools – Chris You" />
   <meta property="og:description" content="RNA-seq, SLAMseq, SILAC-TMT mass spectrometry, and live-cell MS2 imaging." />
   <meta property="og:image" content="resources/shared/portrait_about_2.jpg" />
@@ -212,9 +213,17 @@
     }
 
     @keyframes cd-shape-pulse {
-      0%   { filter: drop-shadow(0 0 0px rgba(200, 155, 90, 0)); }
-      50%  { filter: drop-shadow(0 0 18px rgba(200, 140, 60, 1)) drop-shadow(0 0 6px rgba(200, 140, 60, 0.9)); }
-      100% { filter: drop-shadow(0 0 0px rgba(200, 155, 90, 0)); }
+      0% {
+        filter: drop-shadow(0 0 0px rgba(200, 155, 90, 0));
+      }
+
+      50% {
+        filter: drop-shadow(0 0 18px rgba(200, 140, 60, 1)) drop-shadow(0 0 6px rgba(200, 140, 60, 0.9));
+      }
+
+      100% {
+        filter: drop-shadow(0 0 0px rgba(200, 155, 90, 0));
+      }
     }
 
     .cd-hover-group {
@@ -231,11 +240,12 @@
       animation: none;
     }
 
-    
+
     .tools-layout.cd-any-hover .cd-hover-group {
       animation: none;
       filter: none;
     }
+
     .tools-layout.cd-any-hover .cd-hover-group:hover,
     .tools-layout.cd-any-hover .cd-hover-group.cd-active {
       filter: drop-shadow(0 0 18px rgba(107, 147, 168, 1)) drop-shadow(0 0 6px rgba(107, 147, 168, 0.9));
@@ -246,9 +256,17 @@
     }
 
     @keyframes cd-shape-pulse-lyso {
-      0%   { filter: drop-shadow(0 0 0px rgba(200, 140, 60, 0)); }
-      50%  { filter: drop-shadow(0 0 22px rgba(200, 140, 60, 1)) drop-shadow(0 0 10px rgba(200, 140, 60, 1)); }
-      100% { filter: drop-shadow(0 0 0px rgba(200, 140, 60, 0)); }
+      0% {
+        filter: drop-shadow(0 0 0px rgba(200, 140, 60, 0));
+      }
+
+      50% {
+        filter: drop-shadow(0 0 22px rgba(200, 140, 60, 1)) drop-shadow(0 0 10px rgba(200, 140, 60, 1));
+      }
+
+      100% {
+        filter: drop-shadow(0 0 0px rgba(200, 140, 60, 0));
+      }
     }
 
     .cd-hover-group[data-detail="lysosome"]:hover,
@@ -312,7 +330,7 @@
       opacity: 0.65;
     }
 
-.tools-right-col {
+    .tools-right-col {
       flex: 1;
       display: flex;
       flex-direction: column;
@@ -417,23 +435,83 @@
 
     /* ── Mobile ── */
     @media (max-width: 768px) {
-      html, body { overflow: auto; }
-      .tools-layout { flex-direction: column; height: auto; overflow: visible; }
-      .tools-left-col { flex: none; width: 100%; overflow: visible; }
-      .tools-nav-row { padding: 5.5rem 1.25rem 1rem 1.25rem; }
-      .tools-body { padding: 0 1.25rem 2rem; }
-      .tools-diagrams { display: none; }
-      .cd-diagram-label { font-size: 0.7rem; }
-      .tools-body { padding-bottom: 0; }
-      .tools-right-col { width: 100% !important; height: auto; min-height: 0; border-left: none; border-top: 1px solid var(--panel-border, #ddd8d0); padding: 1.25rem 1.25rem 2rem; }
-      .tools-key-panel { display: none; }
-      .tools-detail-panel { overflow-y: visible; }
+
+      html,
+      body {
+        overflow: auto;
+      }
+
+      .tools-layout {
+        flex-direction: column;
+        height: auto;
+        overflow: visible;
+      }
+
+      .tools-left-col {
+        flex: none;
+        width: 100%;
+        overflow: visible;
+      }
+
+      .tools-nav-row {
+        padding: 5.5rem 1.25rem 1rem 1.25rem;
+      }
+
+      .tools-body {
+        padding: 0 1.25rem 2rem;
+      }
+
+      .tools-diagrams {
+        display: none;
+      }
+
+      .cd-diagram-label {
+        font-size: 0.7rem;
+      }
+
+      .tools-body {
+        padding-bottom: 0;
+      }
+
+      .tools-right-col {
+        width: 100% !important;
+        height: auto;
+        min-height: 0;
+        border-left: none;
+        border-top: 1px solid var(--panel-border, #ddd8d0);
+        padding: 1.25rem 1.25rem 2rem;
+      }
+
+      .tools-key-panel {
+        display: none;
+      }
+
+      .tools-detail-panel {
+        overflow-y: visible;
+      }
+
       /* Show all detail items as static scroll content */
-      .cd-detail-item { display: block !important; border-bottom: 1px solid rgba(0,0,0,0.07); padding-bottom: 1.75rem; margin-bottom: 1.75rem; }
-      .cd-detail-item:last-child { border-bottom: none; margin-bottom: 0; }
-      #cdDefault { display: none !important; }
+      .cd-detail-item {
+        display: block !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+        padding-bottom: 1.75rem;
+        margin-bottom: 1.75rem;
+      }
+
+      .cd-detail-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+
+      #cdDefault {
+        display: none !important;
+      }
+
       /* Disable interactive animations on mobile */
-      .cd-hover-group { animation: none !important; cursor: default; }
+      .cd-hover-group {
+        animation: none !important;
+        cursor: default;
+      }
     }
   </style>
 </head>
@@ -442,55 +520,64 @@
 
   <a href="index.html" class="logo">chris you</a>
   <div class="cell-nav-wrap" id="menuBtn" role="button" aria-label="Open navigation menu" tabindex="0">
-      <svg class="cell-nav-svg" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 276.8 257.7">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: none;
-      }
+    <svg class="cell-nav-svg" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 276.8 257.7">
+      <defs>
+        <style>
+          .cls-1 {
+            fill: none;
+          }
 
-      .cls-1, .cls-2 {
-        stroke: #231f20;
-        stroke-miterlimit: 10;
-        stroke-width: 8px;
-      }
+          .cls-1,
+          .cls-2 {
+            stroke: #231f20;
+            stroke-miterlimit: 10;
+            stroke-width: 8px;
+          }
 
-      .cls-3 {
-        fill: #231f20;
-      }
+          .cls-3 {
+            fill: #231f20;
+          }
 
-      .cls-4, .cls-2 {
-        fill: #fff;
-      }
-    </style>
-  </defs>
-  <g>
-    <path class="cls-4" d="M21.12,239.37c-19-18.36-25.62-61.92-1.85-82.42,21.24-18.69,53.99,1.77,71.87,20.93,21.42,16.64,43.69,45.97,24.1,63.49-22.13,19.33-71.59,13.84-94.13-2Z"/>
-    <path class="cls-1" d="M21.12,239.37c-19-18.36-25.62-61.92-1.85-82.42,21.24-18.69,53.99,1.77,71.87,20.93,21.42,16.64,43.69,45.97,24.1,63.49-22.13,19.33-71.59,13.84-94.13-2Z"/>
-  </g>
-  <g>
-    <g>
-      <path class="cls-4" d="M106.63,40.51c3.02,17.4-6.1,32.4-12.3,44.84-6.15,11.59-12.09,26.14-24.43,25.37-12.31-1.22-23.86-14.13-34.12-22.77-10.3-7.78-23.79-15.14-27.26-24.74-3.5-9.14,5.26-17.98,11.24-26.73,6.03-9.61,11.9-22.88,24.67-29.46C57.22,0,69.14,6.75,79.61,11.69c10.42,5.8,23.98,11.88,27.02,28.82Z"/>
-      <path class="cls-1" d="M106.63,40.51c3.02,17.4-6.1,32.4-12.3,44.84-6.15,11.59-12.09,26.14-24.43,25.37-12.31-1.22-23.86-14.13-34.12-22.77-10.3-7.78-23.79-15.14-27.26-24.74-3.5-9.14,5.26-17.98,11.24-26.73,6.03-9.61,11.9-22.88,24.67-29.46C57.22,0,69.14,6.75,79.61,11.69c10.42,5.8,23.98,11.88,27.02,28.82Z"/>
-    </g>
-    <circle class="cls-2" cx="66.51" cy="50.61" r="11.49"/>
-    <circle class="cls-3" cx="45.66" cy="34.7" r="5.48"/>
-    <circle class="cls-3" cx="37.62" cy="59.49" r="5.48"/>
-  </g>
-  <g>
-    <path class="cls-4" d="M270.83,190.51c-6.89,15.4-28.95,7.23-40.28,12.65-11.66,4.91-20.09,24.8-33.71,19.75-13.2-4.91-23.04-27.42-35.66-37.46-12.66-9.29-34.27-12.61-41.52-22.69-7.52-9.71,4.43-21.71,3.71-32.2-.7-10.17-14.93-22.08-8.32-32.16,6.65-10.82,29.31-14.05,40.81-22.74,11.91-9.66,20.49-32.37,34.64-37.5,13.72-4.98,23.71,14.52,36.6,19.57,12.85,5.79,35.03-1.93,42.05,12.42,7.21,15.49-5.47,41.58-5.18,60.2.29,18.05,13.78,44.02,6.85,60.16Z"/>
-    <path class="cls-1" d="M270.83,190.51c-6.89,15.4-28.95,7.23-40.28,12.65-11.66,4.91-20.09,24.8-33.71,19.75-13.2-4.91-23.04-27.42-35.66-37.46-12.66-9.29-34.27-12.61-41.52-22.69-7.52-9.71,4.43-21.71,3.71-32.2-.7-10.17-14.93-22.08-8.32-32.16,6.65-10.82,29.31-14.05,40.81-22.74,11.91-9.66,20.49-32.37,34.64-37.5,13.72-4.98,23.71,14.52,36.6,19.57,12.85,5.79,35.03-1.93,42.05,12.42,7.21,15.49-5.47,41.58-5.18,60.2.29,18.05,13.78,44.02,6.85,60.16Z"/>
-  </g>
-  <circle class="cls-2" cx="222.42" cy="141.79" r="23.07"/>
-  <circle class="cls-3" cx="174.28" cy="151.44" r="4.81"/>
-  <circle class="cls-3" cx="189.08" cy="96.85" r="4.81"/>
-  <circle class="cls-3" cx="181.57" cy="132.46" r="4.81"/>
-  <circle class="cls-3" cx="231.39" cy="104.05" r="4.81"/>
-  <circle class="cls-2" cx="51.14" cy="218.21" r="14.6"/>
-  <circle class="cls-3" cx="45.66" cy="179.31" r="4.81"/>
-  <circle class="cls-3" cx="80.98" cy="203.61" r="4.81"/>
-</svg>
-    </div>
+          .cls-4,
+          .cls-2 {
+            fill: #fff;
+          }
+        </style>
+      </defs>
+      <g>
+        <path class="cls-4"
+          d="M21.12,239.37c-19-18.36-25.62-61.92-1.85-82.42,21.24-18.69,53.99,1.77,71.87,20.93,21.42,16.64,43.69,45.97,24.1,63.49-22.13,19.33-71.59,13.84-94.13-2Z" />
+        <path class="cls-1"
+          d="M21.12,239.37c-19-18.36-25.62-61.92-1.85-82.42,21.24-18.69,53.99,1.77,71.87,20.93,21.42,16.64,43.69,45.97,24.1,63.49-22.13,19.33-71.59,13.84-94.13-2Z" />
+      </g>
+      <g>
+        <g>
+          <path class="cls-4"
+            d="M106.63,40.51c3.02,17.4-6.1,32.4-12.3,44.84-6.15,11.59-12.09,26.14-24.43,25.37-12.31-1.22-23.86-14.13-34.12-22.77-10.3-7.78-23.79-15.14-27.26-24.74-3.5-9.14,5.26-17.98,11.24-26.73,6.03-9.61,11.9-22.88,24.67-29.46C57.22,0,69.14,6.75,79.61,11.69c10.42,5.8,23.98,11.88,27.02,28.82Z" />
+          <path class="cls-1"
+            d="M106.63,40.51c3.02,17.4-6.1,32.4-12.3,44.84-6.15,11.59-12.09,26.14-24.43,25.37-12.31-1.22-23.86-14.13-34.12-22.77-10.3-7.78-23.79-15.14-27.26-24.74-3.5-9.14,5.26-17.98,11.24-26.73,6.03-9.61,11.9-22.88,24.67-29.46C57.22,0,69.14,6.75,79.61,11.69c10.42,5.8,23.98,11.88,27.02,28.82Z" />
+        </g>
+        <circle class="cls-2" cx="66.51" cy="50.61" r="11.49" />
+        <circle class="cls-3" cx="45.66" cy="34.7" r="5.48" />
+        <circle class="cls-3" cx="37.62" cy="59.49" r="5.48" />
+      </g>
+      <g>
+        <path class="cls-4"
+          d="M270.83,190.51c-6.89,15.4-28.95,7.23-40.28,12.65-11.66,4.91-20.09,24.8-33.71,19.75-13.2-4.91-23.04-27.42-35.66-37.46-12.66-9.29-34.27-12.61-41.52-22.69-7.52-9.71,4.43-21.71,3.71-32.2-.7-10.17-14.93-22.08-8.32-32.16,6.65-10.82,29.31-14.05,40.81-22.74,11.91-9.66,20.49-32.37,34.64-37.5,13.72-4.98,23.71,14.52,36.6,19.57,12.85,5.79,35.03-1.93,42.05,12.42,7.21,15.49-5.47,41.58-5.18,60.2.29,18.05,13.78,44.02,6.85,60.16Z" />
+        <path class="cls-1"
+          d="M270.83,190.51c-6.89,15.4-28.95,7.23-40.28,12.65-11.66,4.91-20.09,24.8-33.71,19.75-13.2-4.91-23.04-27.42-35.66-37.46-12.66-9.29-34.27-12.61-41.52-22.69-7.52-9.71,4.43-21.71,3.71-32.2-.7-10.17-14.93-22.08-8.32-32.16,6.65-10.82,29.31-14.05,40.81-22.74,11.91-9.66,20.49-32.37,34.64-37.5,13.72-4.98,23.71,14.52,36.6,19.57,12.85,5.79,35.03-1.93,42.05,12.42,7.21,15.49-5.47,41.58-5.18,60.2.29,18.05,13.78,44.02,6.85,60.16Z" />
+      </g>
+      <circle class="cls-2" cx="222.42" cy="141.79" r="23.07" />
+      <circle class="cls-3" cx="174.28" cy="151.44" r="4.81" />
+      <circle class="cls-3" cx="189.08" cy="96.85" r="4.81" />
+      <circle class="cls-3" cx="181.57" cy="132.46" r="4.81" />
+      <circle class="cls-3" cx="231.39" cy="104.05" r="4.81" />
+      <circle class="cls-2" cx="51.14" cy="218.21" r="14.6" />
+      <circle class="cls-3" cx="45.66" cy="179.31" r="4.81" />
+      <circle class="cls-3" cx="80.98" cy="203.61" r="4.81" />
+    </svg>
+  </div>
 
   <div class="tools-layout">
     <div class="tools-left-col">
@@ -948,7 +1035,7 @@
         </div>
 
         <div class="cd-detail-item" id="cdDetail-ccnd1" style="display:none">
-          <div class="cd-detail-name">CCND1 induction system</div>
+          <div class="cd-detail-name">Making cells big</div>
           <div class="cd-detail-cat">Genetic cell size manipulation</div>
           <div class="tool-diagram-wrap" style="width:85%; padding-bottom:39.5%;"><object type="image/svg+xml"
               data="resources/tools/ccnd1_tools.xml"></object></div>
@@ -963,8 +1050,8 @@
         </div>
 
         <div class="cd-detail-item" id="cdDetail-ms2" style="display:none">
-          <div class="cd-detail-name">MS2 live-cell imaging</div>
-          <div class="cd-detail-cat">Single-molecule transcriptional burst tracking</div>
+          <div class="cd-detail-name">How does transcription change with cell size?</div>
+          <div class="cd-detail-cat">Single-molecule transcriptional burst imaging</div>
           <div class="tool-diagram-wrap" style="width:100%; padding-bottom:37.2%;"><object type="image/svg+xml"
               data="resources/tools/bursting_tools.xml"></object></div>
           <p class="cd-detail-body">To track in real-time how transcription is regulated by cell size, we used MS2
@@ -976,8 +1063,8 @@
         </div>
 
         <div class="cd-detail-item" id="cdDetail-rnaseq" style="display:none">
-          <div class="cd-detail-name">RNAseq</div>
-          <div class="cd-detail-cat">Genome-wide transcriptomics</div>
+          <div class="cd-detail-name">What does the transcriptome of large cells look like?</div>
+          <div class="cd-detail-cat">Genome-wide transcriptomics: RNAseq</div>
           <div class="tool-diagram-wrap" style="width:100%; padding-bottom:30.3%;"><object type="image/svg+xml"
               data="resources/tools/rnaseq_tools.xml"></object></div>
           <p class="cd-detail-body">To ask how mRNA concentrations change with cell size, we performed RNAseq on
@@ -988,8 +1075,8 @@
         </div>
 
         <div class="cd-detail-item" id="cdDetail-slamseq" style="display:none">
-          <div class="cd-detail-name">SLAMseq</div>
-          <div class="cd-detail-cat">mRNA turnover measurement</div>
+          <div class="cd-detail-name">Tracking mRNA decay</div>
+          <div class="cd-detail-cat">mRNA turnover measurement: SLAMseq</div>
           <div class="tool-diagram-wrap" style="width:100%; padding-bottom:51.6%;"><object type="image/svg+xml"
               data="resources/tools/rna_turnover_tools.xml"></object></div>
           <p class="cd-detail-body">To track the rate of mRNA decay as a function of cell size, we used SLAMseq. Cells
@@ -1000,8 +1087,8 @@
         </div>
 
         <div class="cd-detail-item" id="cdDetail-tmt" style="display:none">
-          <div class="cd-detail-name">TMT Mass Spectrometry</div>
-          <div class="cd-detail-cat">Quantitative proteomics</div>
+          <div class="cd-detail-name">Examining the protein composition of large cells</div>
+          <div class="cd-detail-cat">Quantitative proteomics: Mass spectrometry</div>
           <div class="tool-diagram-wrap" style="width:55%; padding-bottom:31.5%;"><object type="image/svg+xml"
               data="resources/tools/cell_size_proteomics_tools.xml"></object></div>
           <p class="cd-detail-body">To confirm that size-dependent proteome remodeling occurs in our genetically
@@ -1012,8 +1099,8 @@
         </div>
 
         <div class="cd-detail-item" id="cdDetail-silac" style="display:none">
-          <div class="cd-detail-name">Pulse SILAC-TMT</div>
-          <div class="cd-detail-cat">Protein turnover measurement</div>
+          <div class="cd-detail-name">How quickly do cells replace their proteins?</div>
+          <div class="cd-detail-cat">Protein turnover measurement: pSILAC-TMT</div>
           <div class="tool-diagram-wrap" style="width:85%; padding-bottom:48.2%;"><object type="image/svg+xml"
               data="resources/tools/protein_turnover_tools.xml"></object></div>
           <p class="cd-detail-body">To track protein decay rates across cell sizes, we used stable isotope labeling by
@@ -1024,8 +1111,8 @@
         </div>
 
         <div class="cd-detail-item" id="cdDetail-lysosome" style="display:none">
-          <div class="cd-detail-name">Lysosome inhibitor assays</div>
-          <div class="cd-detail-cat">Functional vulnerability measurements</div>
+          <div class="cd-detail-name">How does getting big impact cell physiology?</div>
+          <div class="cd-detail-cat">Functional lysosome vulnerability measurements</div>
           <div class="tool-diagram-wrap" style="width:55%; padding-bottom:33.8%;"><object type="image/svg+xml"
               data="resources/tools/cell_size_lysosome_inhibition_tools.xml"></object></div>
           <p class="cd-detail-body">Lysosomal proteins are among the highest super-scaling proteins.
@@ -1058,10 +1145,11 @@
         <li><a href="index.html#about">about</a></li>
         <li><a href="cv.html">cv</a></li>
         <li>
-                  <div class="drawer-research-row">
-          <a href="research.html" class="drawer-research-link">research</a>
-          <button class="drawer-research-toggle" id="researchToggle"><span class="drawer-research-arrow">&#x203A;</span></button>
-        </div>
+          <div class="drawer-research-row">
+            <a href="research.html" class="drawer-research-link">research</a>
+            <button class="drawer-research-toggle" id="researchToggle"><span
+                class="drawer-research-arrow">&#x203A;</span></button>
+          </div>
           <div class="drawer-subnav" id="researchSubnav">
             <a href="question.html">question</a>
             <a href="tools.html">tools</a>
@@ -1154,16 +1242,16 @@
           if (layout) {
             layout.classList.remove('cd-any-hover');
             var all = layout.querySelectorAll('.cd-hover-group');
-            all.forEach(function(g) { g.style.animation = 'none'; });
+            all.forEach(function (g) { g.style.animation = 'none'; });
             void layout.offsetWidth;
-            all.forEach(function(g) { g.style.animation = ''; });
+            all.forEach(function (g) { g.style.animation = ''; });
           }
           leaveTimer = setTimeout(function () { showDetail(null); }, 280);
         });
       });
 
 
-})();
+    })();
 
     // Cell icon pulse
     (function () {
